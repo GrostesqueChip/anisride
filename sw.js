@@ -1,7 +1,7 @@
 // Ani's Ride — Service Worker
 // Caches app assets for offline use
 
-const CACHE_NAME = 'anis-ride-v8';
+const CACHE_NAME = 'anis-ride-v9';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
