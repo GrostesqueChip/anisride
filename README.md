@@ -7,12 +7,13 @@ A modern, soft-minimalist Progressive Web App (PWA) built specifically for Anika
 ## 🌟 Features
 
 - **Real BMTC Bus Routes (Google Maps Verified)**:
-  - **Direct (`273-B`)**: Boards at **HMT Hospital Stop** (~5 min walk) → **MS Ramaiah College Stop** (~25 min direct ride).
-  - **2-Bus Transfers via BEL Circle**: Boards feeder **`502-C`**, **`501-NH`**, or **`502-E`** at **Jalahalli Village Stop** (~3 min walk) → Transfers at **BEL Circle** to **`273`** or **`401-K`** → **MS Ramaiah College Stop** (~30 min total).
+  - **Direct (`273-B` / `276`)**: Boards at **HMT Hospital Stop** (~5 min walk) → **MS Ramaiah College Stop** (Main Gate, ~25 min ride) OR **Mathikere Stop** (Back Gate 10/11, ~23 min ride).
+  - **Back Gate 10 & 11 Shortcut**: Drops at **Mathikere Stop / Devasandra** with a quick ~2 min walk straight into Gate 10 & Gate 11 (Engineering Sciences Block & Hostels).
+  - **2-Bus Transfers via BEL Circle**: Boards feeder **`502-C`**, **`501-NH`**, or **`502-E`** at **Jalahalli Village Stop** (~3 min walk) → Transfers at **BEL Circle** to **`273`**, **`276`**, or **`401-K`** → **Mathikere / College Stop** (~28–30 min total).
 - **Tabbed View**: Auto-switches between **To MSRIT** (morning) and **To Home** (afternoon).
 - **Time Calculations**: Shows live countdown, exact departure, walk-adjusted **"Leave by"** time, and transit-adjusted **"Reach by"** time.
-- **Google Maps Walking Directions**: Quick-action links directly to walking routes for both bus stops and the college campus.
-- **WhatsApp Safe Arrival**: One-tap button (`yo, im here 🤍`) sends a message to Sharvesh (`+91 9448176034`).
+- **Google Maps Walking Directions**: Quick-action links directly to walking routes for both bus stops, Main Gate, and Gate 10/11 Back Gate.
+- **WhatsApp Safe Arrival**: One-tap button (`I reached loveyyy 🤍`) sends a message to Sharvesh (`+91 9448176034`).
 - **iOS & Android PWA Support**: Can be added to the iPhone home screen with a native app icon and full-screen experience.
 
 ---
@@ -54,8 +55,9 @@ Anu/
 
 ## ⚙️ Customization Guide
 
-- **Update WhatsApp Number**: Edit line 427 of `index.html`:
+- **Update WhatsApp Number**: Edit line in `index.html`:
   `const WA_PHONE = "919448176034";`
-- **Update WhatsApp Message**: Edit line 428 of `index.html`:
-  `const WA_MSG = "yo, im here";`
+- **Update WhatsApp Message**: Edit line in `index.html`:
+  `const WA_MSG = "I reached loveyyy";`
 - **Update Bus Timings**: Modify `SCHEDULE_TO_COLLEGE` and `SCHEDULE_TO_HOME` arrays at the top of the `<script>` tag in `index.html`.
+
