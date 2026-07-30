@@ -222,8 +222,10 @@
     .guide-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; }
     .guide-item:not(:last-child) { border-bottom: 1px solid var(--border); }
     .guide-pill {
-      min-width: 52px; padding: 6px 10px; border-radius: var(--radius-sm);
-      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 800; text-align: center; flex-shrink: 0;
+      min-width: 60px; padding: 8px 10px; border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 800; text-align: center; flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+      line-height: 1.2; word-break: break-word;
     }
     .guide-pill.direct { color: var(--direct-color); background: rgba(125, 166, 147, 0.12); }
     .guide-pill.transfer { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
@@ -699,34 +701,40 @@
       const el = document.getElementById('routeGuide');
       const c = currentTab === 'college';
       el.innerHTML = `
-        <div class="guide-title">🗺 Route Options & Back Gate Guide</div>
+        <div class="guide-title">🗺 Route Options & Gate 11 Guide</div>
 
         <div class="guide-item">
-          <div class="guide-pill direct">273-B</div>
+          <div class="guide-pill direct">
+            <span>🚌</span>
+            <span>273-B</span>
+          </div>
           <div class="guide-info">
             <div class="guide-route-name">1. Direct Route (273-B)</div>
             <div class="guide-route-desc">
               ${c
                 ? `<strong>Step 1:</strong> Walk to <strong>HMT Hospital Stop</strong> on Jalahalli Rd (~400m / 5 min walk)<br>
                    <strong>Step 2:</strong> Board <strong>273-B</strong><br>
-                   <strong>Step 3:</strong> Get off at <strong>College Stop</strong> (~25 min ride)<br>
-                   <strong>Step 4:</strong> Walk to college main campus (~5 min)`
-                : `<strong>Step 1:</strong> Walk to <strong>College Stop</strong> (~5 min walk)<br>
+                   <strong>Step 3:</strong> Get off at <strong>MS Ramaiah College Stop</strong> (~25 min ride)<br>
+                   <strong>Step 4:</strong> Walk to college campus (~2–5 min)`
+                : `<strong>Step 1:</strong> Walk to <strong>MS Ramaiah College Stop</strong> (~2–5 min walk)<br>
                    <strong>Step 2:</strong> Board <strong>273-B</strong> heading toward Jalahalli<br>
                    <strong>Step 3:</strong> Get off at <strong>HMT Hospital Stop</strong> (~25 min ride)<br>
                    <strong>Step 4:</strong> Walk home to Vinyaas Virtue (~5 min)`}
             </div>
-            <span class="guide-tag d">✅ Direct — Main Gate Access</span>
+            <span class="guide-tag d">✅ Direct — College Stop Access</span>
           </div>
         </div>
 
         <div class="guide-item">
-          <div class="guide-pill direct" style="background:rgba(232, 157, 134, 0.18);color:var(--warm-orange-dark);">🚪 273-B / 276</div>
+          <div class="guide-pill direct" style="background:rgba(232, 157, 134, 0.18);color:var(--warm-orange-dark);">
+            <span>🚪</span>
+            <span>276 / 273</span>
+          </div>
           <div class="guide-info">
             <div class="guide-route-name">2. Direct Gate 11 Route (via MS Ramaiah College Stop)</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>Why use it:</strong> Drops off directly at <strong>MS Ramaiah College Stop</strong> — only a <strong>2 min walk</strong> straight into Gate 11.<br>
+                ? `<strong>Why use it:</strong> Board <strong>273-B</strong> or <strong>276</strong> to <strong>MS Ramaiah College Stop</strong> — only a <strong>2 min walk</strong> (150m) straight into Gate 11!<br>
                    <strong>Step 1:</strong> Board <strong>273-B</strong> or <strong>276</strong> at HMT Hospital Stop (or transfer via BEL Circle)<br>
                    <strong>Step 2:</strong> Get off at <strong>MS Ramaiah College Stop</strong><br>
                    <strong>Step 3:</strong> Walk 150m (~2 mins) straight into Gate 11.`
@@ -740,7 +748,10 @@
         </div>
 
         <div class="guide-item">
-          <div class="guide-pill transfer" style="font-size:9px;line-height:1.3;">502-C<br>+ 273/276</div>
+          <div class="guide-pill transfer">
+            <span>🔄</span>
+            <span>502-C + 273/276</span>
+          </div>
           <div class="guide-info">
             <div class="guide-route-name">3. Transfer via BEL Circle</div>
             <div class="guide-route-desc">
@@ -763,7 +774,10 @@
         </div>
 
         <div class="guide-item">
-          <div class="guide-pill transfer" style="font-size:10px;">🗺</div>
+          <div class="guide-pill transfer">
+            <span>🗺</span>
+            <span>Maps</span>
+          </div>
           <div class="guide-info">
             <div class="guide-route-name">Google Maps Live Links</div>
             <div class="guide-route-desc" style="display:flex;flex-direction:column;gap:6px;">
