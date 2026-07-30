@@ -14,41 +14,41 @@
   <meta name="apple-mobile-web-app-title" content="Ani's Ride">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
 
-  <!-- Google Fonts — Inter -->
+  <!-- Google Fonts — Plus Jakarta Sans & Outfit (Pinterest Aesthetic) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #FAFAF8;
+      --bg: #FAFAF7;
       --card: #FFFFFF;
-      --accent: #9CAEA9;
-      --accent-hover: #88A09B;
-      --accent-light: rgba(156, 174, 169, 0.12);
-      --accent-medium: rgba(156, 174, 169, 0.55);
-      --text-primary: #2D2D2D;
-      --text-secondary: #8A8A8A;
-      --text-muted: #B0B0B0;
-      --border: #F0EFED;
-      --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-      --card-shadow-hover: 0 4px 24px rgba(0, 0, 0, 0.07);
-      --pill-shadow: 0 4px 20px rgba(156, 174, 169, 0.3);
-      --radius-card: 20px;
+      --accent: #8FA499;
+      --accent-hover: #7B9287;
+      --accent-light: rgba(143, 164, 153, 0.12);
+      --accent-medium: rgba(143, 164, 153, 0.45);
+      --text-primary: #2C302E;
+      --text-secondary: #7A827E;
+      --text-muted: #A8B0AB;
+      --border: #F0F2EF;
+      --card-shadow: 0 4px 20px rgba(143, 164, 153, 0.08);
+      --card-shadow-hover: 0 8px 30px rgba(143, 164, 153, 0.14);
+      --pill-shadow: 0 6px 24px rgba(143, 164, 153, 0.35);
+      --radius-card: 24px;
       --radius-pill: 50px;
-      --radius-sm: 12px;
+      --radius-sm: 14px;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
-      --warm-orange: #E9A38C;
-      --warm-orange-light: rgba(233, 163, 140, 0.12);
-      --warm-orange-dark: #C47A5E;
-      --direct-color: #8BB5A2;
-      --transfer-color: #B5A48B;
+      --warm-orange: #E89D86;
+      --warm-orange-light: rgba(232, 157, 134, 0.12);
+      --warm-orange-dark: #C67B64;
+      --direct-color: #7DA693;
+      --transfer-color: #B29D82;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text-primary);
       min-height: 100dvh;
@@ -63,24 +63,24 @@
       max-width: 430px;
       min-height: 100dvh;
       position: relative;
-      padding: 0 20px;
+      padding: 0 22px;
       padding-bottom: calc(140px + var(--safe-bottom));
     }
 
     /* ── Header ── */
     .header { padding: 56px 0 4px 0; animation: fadeSlideDown 0.6s ease; }
-    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
-    .app-name { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
-    .header-date { font-size: 12px; font-weight: 500; color: var(--text-muted); }
-    .greeting { font-size: 28px; font-weight: 700; color: var(--text-primary); margin-top: 12px; line-height: 1.2; }
-    .greeting-sub { font-size: 14px; color: var(--text-secondary); margin-top: 6px; font-weight: 400; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .app-name { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+    .header-date { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.2px; }
+    .greeting { font-family: 'Outfit', sans-serif; font-size: 30px; font-weight: 700; color: var(--text-primary); margin-top: 10px; line-height: 1.18; letter-spacing: -0.4px; }
+    .greeting-sub { font-size: 14px; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
 
     /* ── Tab Toggle ── */
-    .tab-container { margin: 20px 0 16px 0; animation: fadeSlideDown 0.6s ease 0.1s both; }
-    .tab-toggle { display: flex; background: var(--card); border-radius: var(--radius-pill); padding: 5px; box-shadow: var(--card-shadow); }
+    .tab-container { margin: 22px 0 18px 0; animation: fadeSlideDown 0.6s ease 0.1s both; }
+    .tab-toggle { display: flex; background: var(--card); border-radius: var(--radius-pill); padding: 5px; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
     .tab-btn {
       flex: 1; padding: 13px 16px; border: none; background: transparent;
-      font-family: inherit; font-size: 14px; font-weight: 600; color: var(--text-secondary);
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-secondary);
       cursor: pointer; border-radius: var(--radius-pill);
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -92,123 +92,124 @@
 
     /* ── Route Summary Card ── */
     .route-summary {
-      background: var(--card); border-radius: var(--radius-card); padding: 18px 20px;
-      margin-bottom: 16px; box-shadow: var(--card-shadow);
+      background: var(--card); border-radius: var(--radius-card); padding: 20px 22px;
+      margin-bottom: 18px; box-shadow: var(--card-shadow); border: 1px solid var(--border);
       animation: fadeSlideDown 0.5s ease 0.15s both;
     }
-    .route-summary-title { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .route-journey { display: flex; align-items: center; gap: 0; margin-bottom: 14px; }
-    .route-point { font-size: 11px; font-weight: 600; color: var(--text-primary); max-width: 90px; }
+    .route-summary-title { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; letter-spacing: -0.1px; }
+    .route-journey { display: flex; align-items: center; gap: 0; margin-bottom: 16px; }
+    .route-point { font-size: 11px; font-weight: 700; color: var(--text-primary); max-width: 90px; font-family: 'Outfit', sans-serif; }
     .route-point.start { text-align: left; margin-right: 8px; }
     .route-point.end { text-align: right; margin-left: 8px; }
     .route-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
     .route-dot.start-dot { background: var(--accent); }
     .route-dot.end-dot { background: var(--warm-orange); }
-    .route-line { flex: 1; height: 2px; background: linear-gradient(to right, var(--accent), var(--warm-orange)); position: relative; }
-    .route-line-label { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--text-muted); white-space: nowrap; font-weight: 500; }
+    .route-line { flex: 1; height: 2.5px; background: linear-gradient(to right, var(--accent), var(--warm-orange)); position: relative; border-radius: 4px; }
+    .route-line-label { position: absolute; top: -19px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--text-muted); white-space: nowrap; font-weight: 600; }
     .route-chips { display: flex; gap: 8px; flex-wrap: wrap; }
     .route-chip {
       display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 10px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 500; background: var(--bg); color: var(--text-secondary);
+      padding: 6px 12px; border-radius: var(--radius-pill);
+      font-size: 11px; font-weight: 600; background: var(--bg); color: var(--text-secondary);
     }
     .route-chip .ci { font-size: 13px; }
 
     /* ── Section Divider ── */
     .section-divider {
-      font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-      color: var(--text-muted); margin-bottom: 12px; padding-left: 4px;
-      display: flex; align-items: center; gap: 8px;
+      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 14px; padding-left: 4px;
+      display: flex; align-items: center; gap: 10px;
     }
     .section-divider-line { flex: 1; height: 1px; background: var(--border); }
 
     /* ── Bus Card ── */
-    .bus-list { display: flex; flex-direction: column; gap: 12px; transition: opacity 0.3s ease, transform 0.3s ease; }
+    .bus-list { display: flex; flex-direction: column; gap: 14px; transition: opacity 0.3s ease, transform 0.3s ease; }
     .bus-list.fade-out { opacity: 0; transform: translateY(8px); }
     .bus-list.fade-in { opacity: 1; transform: translateY(0); }
 
     .bus-card {
-      background: var(--card); border-radius: var(--radius-card); padding: 16px 18px;
-      box-shadow: var(--card-shadow); display: flex; align-items: flex-start; gap: 14px;
-      transition: all 0.3s ease; opacity: 0; transform: translateY(12px);
+      background: var(--card); border-radius: var(--radius-card); padding: 18px 20px;
+      box-shadow: var(--card-shadow); border: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 16px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0; transform: translateY(12px);
       animation: cardFadeIn 0.4s ease forwards;
     }
-    .bus-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-    .bus-card.past { opacity: 0.4; filter: grayscale(0.3); }
+    .bus-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
+    .bus-card.past { opacity: 0.45; filter: grayscale(0.3); }
     .bus-card.past:hover { transform: none; box-shadow: var(--card-shadow); }
-    .bus-card.next-bus { border: 1.5px solid var(--accent); box-shadow: 0 2px 20px rgba(156, 174, 169, 0.15); }
+    .bus-card.next-bus { border: 1.5px solid var(--accent); box-shadow: 0 4px 24px rgba(143, 164, 153, 0.2); }
 
-    .bus-left { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+    .bus-left { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
     .bus-number-pill {
-      width: 56px; height: 52px; border-radius: 14px;
+      width: 58px; height: 54px; border-radius: 16px;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-light);
-      letter-spacing: 0.3px; line-height: 1.1; text-align: center;
+      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 800; color: var(--accent); background: var(--accent-light);
+      letter-spacing: 0.2px; line-height: 1.1; text-align: center;
     }
-    .bus-number-pill .bus-type-label { font-size: 8px; font-weight: 600; letter-spacing: 0.5px; opacity: 0.7; margin-top: 2px; }
+    .bus-number-pill .bus-type-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.5px; opacity: 0.75; margin-top: 2px; }
     .bus-card.next-bus .bus-number-pill { background: var(--accent); color: #FFFFFF; }
-    .bus-card.transfer .bus-number-pill { color: var(--transfer-color); background: rgba(181, 164, 139, 0.12); }
+    .bus-card.transfer .bus-number-pill { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
 
     .maps-link {
-      font-size: 10px; font-weight: 600; color: var(--accent); text-decoration: none;
-      display: flex; align-items: center; gap: 3px; opacity: 0.7; transition: opacity 0.2s;
+      font-size: 10px; font-weight: 700; color: var(--accent); text-decoration: none;
+      display: flex; align-items: center; gap: 3px; opacity: 0.8; transition: opacity 0.2s;
     }
     .maps-link:hover { opacity: 1; }
 
     .bus-info { flex: 1; min-width: 0; }
-    .bus-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
+    .bus-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
     .next-label {
-      font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
-      color: #FFFFFF; background: var(--accent); padding: 2px 8px; border-radius: var(--radius-pill);
+      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+      color: #FFFFFF; background: var(--accent); padding: 3px 9px; border-radius: var(--radius-pill);
     }
-    .bus-departure { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.3px; }
+    .bus-departure { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.3px; }
     .bus-card.past .bus-departure { color: var(--text-muted); }
 
-    .bus-stop-row { display: flex; align-items: center; gap: 5px; margin-bottom: 6px; }
-    .bus-stop-name { font-size: 13px; font-weight: 500; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; }
+    .bus-stop-row { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+    .bus-stop-name { font-size: 13px; font-weight: 600; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; }
     .bus-stop-icon { font-size: 12px; flex-shrink: 0; }
 
     .bus-transfer-detail {
-      font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; padding: 6px 10px;
-      background: rgba(181, 164, 139, 0.08); border-radius: var(--radius-sm); line-height: 1.5;
+      font-size: 11px; color: var(--text-secondary); margin-bottom: 8px; padding: 7px 12px;
+      background: rgba(178, 157, 130, 0.08); border-radius: var(--radius-sm); line-height: 1.5; font-weight: 500;
     }
-    .bus-transfer-detail strong { color: var(--text-primary); }
+    .bus-transfer-detail strong { color: var(--text-primary); font-weight: 700; }
 
     .bus-meta-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
     .countdown-badge {
       display: inline-flex; align-items: center; gap: 4px;
-      padding: 4px 10px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 600; background: var(--accent-light); color: var(--accent-hover);
+      padding: 4px 11px; border-radius: var(--radius-pill);
+      font-size: 11px; font-weight: 700; background: var(--accent-light); color: var(--accent-hover);
       white-space: nowrap;
     }
     .countdown-badge.urgent { background: var(--warm-orange-light); color: var(--warm-orange-dark); animation: subtlePulse 2s ease-in-out infinite; }
     .countdown-badge.past-badge { background: rgba(0,0,0,0.04); color: var(--text-muted); }
     .meta-badge {
       display: inline-flex; align-items: center; gap: 4px;
-      padding: 4px 10px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 500; background: var(--bg); color: var(--text-secondary);
+      padding: 4px 11px; border-radius: var(--radius-pill);
+      font-size: 11px; font-weight: 600; background: var(--bg); color: var(--text-secondary);
       white-space: nowrap;
     }
-    .bus-note { font-size: 11px; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+    .bus-note { font-size: 11px; color: var(--text-muted); margin-top: 6px; font-style: italic; font-weight: 500; }
 
     /* ── Transfer indicator ── */
     .transfer-tag {
-      font-size: 9px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
-      color: var(--transfer-color); background: rgba(181, 164, 139, 0.12);
-      padding: 2px 8px; border-radius: var(--radius-pill);
+      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
+      color: var(--transfer-color); background: rgba(178, 157, 130, 0.12);
+      padding: 3px 9px; border-radius: var(--radius-pill);
     }
     .direct-tag {
-      font-size: 9px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
-      color: var(--direct-color); background: rgba(139, 181, 162, 0.12);
-      padding: 2px 8px; border-radius: var(--radius-pill);
+      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
+      color: var(--direct-color); background: rgba(125, 166, 147, 0.12);
+      padding: 3px 9px; border-radius: var(--radius-pill);
     }
 
     /* ── Past Buses ── */
     .past-section { margin-top: 20px; }
     .past-toggle {
-      display: flex; align-items: center; gap: 8px; padding: 12px 16px;
+      display: flex; align-items: center; gap: 8px; padding: 13px 18px;
       background: transparent; border: 1.5px dashed var(--border); border-radius: var(--radius-card);
-      font-family: inherit; font-size: 13px; font-weight: 500; color: var(--text-muted);
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-muted);
       cursor: pointer; width: 100%; transition: all 0.2s ease;
     }
     .past-toggle:hover { border-color: var(--text-muted); color: var(--text-secondary); }
@@ -219,51 +220,52 @@
 
     /* ── Route Guide ── */
     .route-guide {
-      margin-top: 24px; padding: 18px 18px; background: var(--card);
-      border-radius: var(--radius-card); box-shadow: var(--card-shadow);
+      margin-top: 26px; padding: 20px 20px; background: var(--card);
+      border-radius: var(--radius-card); box-shadow: var(--card-shadow); border: 1px solid var(--border);
       animation: fadeSlideDown 0.5s ease 0.4s both;
     }
-    .guide-title { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
-    .guide-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; }
+    .guide-title { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .guide-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; }
     .guide-item:not(:last-child) { border-bottom: 1px solid var(--border); }
     .guide-pill {
-      min-width: 50px; padding: 4px 8px; border-radius: var(--radius-sm);
-      font-size: 11px; font-weight: 700; text-align: center; flex-shrink: 0;
+      min-width: 52px; padding: 6px 10px; border-radius: var(--radius-sm);
+      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 800; text-align: center; flex-shrink: 0;
     }
-    .guide-pill.direct { color: var(--direct-color); background: rgba(139, 181, 162, 0.12); }
-    .guide-pill.transfer { color: var(--transfer-color); background: rgba(181, 164, 139, 0.12); }
+    .guide-pill.direct { color: var(--direct-color); background: rgba(125, 166, 147, 0.12); }
+    .guide-pill.transfer { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
     .guide-info { flex: 1; }
-    .guide-route-name { font-size: 12px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
-    .guide-route-desc { font-size: 11px; color: var(--text-secondary); line-height: 1.5; }
-    .guide-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; margin-top: 4px; }
-    .guide-tag.d { color: var(--direct-color); background: rgba(139, 181, 162, 0.12); }
-    .guide-tag.t { color: var(--transfer-color); background: rgba(181, 164, 139, 0.12); }
+    .guide-route-name { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+    .guide-route-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; font-weight: 500; }
+    .guide-tag { display: inline-block; font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; margin-top: 6px; }
+    .guide-tag.d { color: var(--direct-color); background: rgba(125, 166, 147, 0.12); }
+    .guide-tag.t { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
 
     /* ── No Buses ── */
     .no-buses { text-align: center; padding: 40px 24px; animation: fadeSlideDown 0.5s ease; }
     .no-buses-emoji { font-size: 44px; margin-bottom: 14px; }
-    .no-buses-title { font-size: 17px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-    .no-buses-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
-    .no-buses-tip { margin-top: 16px; padding: 12px 16px; background: var(--accent-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--accent-hover); font-weight: 500; }
+    .no-buses-title { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .no-buses-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; font-weight: 500; }
+    .no-buses-tip { margin-top: 16px; padding: 12px 16px; background: var(--accent-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--accent-hover); font-weight: 600; }
 
     /* ── WhatsApp Button ── */
     .wa-wrap { position: fixed; bottom: calc(24px + var(--safe-bottom)); left: 50%; transform: translateX(-50%); z-index: 100; animation: fadeSlideUp 0.6s ease 0.5s both; }
     .wa-btn {
-      display: flex; align-items: center; gap: 8px; padding: 16px 36px;
+      display: flex; align-items: center; gap: 8px; padding: 16px 38px;
       background: var(--accent); color: #FFFFFF; border: none; border-radius: var(--radius-pill);
-      font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
-      box-shadow: var(--pill-shadow), 0 8px 32px rgba(156, 174, 169, 0.25);
-      transition: all 0.2s ease; user-select: none; white-space: nowrap;
+      font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
+      box-shadow: var(--pill-shadow), 0 8px 32px rgba(143, 164, 153, 0.25);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); user-select: none; white-space: nowrap;
+      letter-spacing: 0.2px;
     }
-    .wa-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
-    .wa-btn:active { transform: scale(0.95); box-shadow: 0 2px 12px rgba(156, 174, 169, 0.3); }
+    .wa-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .wa-btn:active { transform: scale(0.95); box-shadow: 0 2px 12px rgba(143, 164, 153, 0.3); }
 
     /* ── Install Banner ── */
-    .install-banner { display: none; margin-top: 20px; padding: 16px 20px; background: var(--card); border-radius: var(--radius-card); box-shadow: var(--card-shadow); }
+    .install-banner { display: none; margin-top: 20px; padding: 18px 20px; background: var(--card); border-radius: var(--radius-card); box-shadow: var(--card-shadow); border: 1px solid var(--border); }
     .install-banner.show { display: block; }
-    .install-banner-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-    .install-banner-text { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-    .install-dismiss { margin-top: 10px; padding: 8px 16px; background: var(--accent-light); border: none; border-radius: var(--radius-pill); font-family: inherit; font-size: 12px; font-weight: 600; color: var(--accent); cursor: pointer; }
+    .install-banner-title { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+    .install-banner-text { font-size: 13px; color: var(--text-secondary); line-height: 1.5; font-weight: 500; }
+    .install-dismiss { margin-top: 12px; padding: 8px 18px; background: var(--accent-light); border: none; border-radius: var(--radius-pill); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; color: var(--accent); cursor: pointer; }
 
     /* ── Animations ── */
     @keyframes fadeSlideDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
@@ -282,11 +284,11 @@
     .bus-card:nth-child(10) { animation-delay: 0.5s; }
     ::-webkit-scrollbar { width: 0; }
     @media (max-width: 360px) {
-      .greeting { font-size: 24px; }
-      .bus-card { padding: 14px 14px; gap: 10px; }
-      .bus-number-pill { width: 48px; height: 46px; font-size: 12px; }
-      .wa-btn { padding: 14px 28px; font-size: 14px; }
-      .bus-departure { font-size: 18px; }
+      .greeting { font-size: 26px; }
+      .bus-card { padding: 15px 15px; gap: 12px; }
+      .bus-number-pill { width: 50px; height: 48px; font-size: 12px; }
+      .wa-btn { padding: 14px 30px; font-size: 14px; }
+      .bus-departure { font-size: 20px; }
     }
   </style>
 </head>
@@ -522,7 +524,7 @@
               🚏 Walk to Jalahalli Stop (3 min)
             </a>
             <a href="${MAPS_LINKS.transitFullCollege}" target="_blank"
-               style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(181,164,139,0.12);color:var(--transfer-color);text-decoration:none;">
+               style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(178,157,130,0.12);color:var(--transfer-color);text-decoration:none;">
               🗺 Google Maps Live
             </a>
           ` : `
@@ -535,7 +537,7 @@
               🚶‍♀️ Walk Home from Stop (3 min)
             </a>
             <a href="${MAPS_LINKS.transitFullHome}" target="_blank"
-               style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(181,164,139,0.12);color:var(--transfer-color);text-decoration:none;">
+               style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(178,157,130,0.12);color:var(--transfer-color);text-decoration:none;">
               🗺 Google Maps Live
             </a>
           `}
