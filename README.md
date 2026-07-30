@@ -56,7 +56,7 @@ Anu/
 ## ⚙️ Customization Guide
 
 - **Update WhatsApp Number**: Edit line in `index.html`:
-  `const WA_PHONE = "919448176034";`
+  `const WA_PHONE = "XXXXX";`
 - **Update WhatsApp Message**: Edit line in `index.html`:
   `const WA_MSG = "I reached loveyyy";`
 - **Update Bus Timings**: Modify `SCHEDULE_TO_COLLEGE` and `SCHEDULE_TO_HOME` arrays at the top of the `<script>` tag in `index.html`.
