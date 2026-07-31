@@ -4,8 +4,8 @@
   "description": "Bus commute helper for Anika — Vinyaas Virtue ↔ MSRIT",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#FAFAF8",
-  "theme_color": "#9CAEA9",
+  "background_color": "#FAFAF7",
+  "theme_color": "#8B9E8B",
   "orientation": "portrait",
   "icons": [
     {

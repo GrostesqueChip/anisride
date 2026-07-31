@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
   <title>Ani's Ride</title>
   <meta name="description" content="Bus commute helper for Anika — Vinyaas Virtue to College and back">
-  <meta name="theme-color" content="#9CAEA9">
+  <meta name="theme-color" content="#8B9E8B">
 
   <!-- PWA & iOS -->
   <link rel="manifest" href="manifest.json">
@@ -14,34 +14,34 @@
   <meta name="apple-mobile-web-app-title" content="Ani's Ride">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
 
-  <!-- Google Fonts — Plus Jakarta Sans & Outfit (Pinterest Aesthetic) -->
+  <!-- Google Fonts — Playfair Display + Plus Jakarta Sans + DM Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #FAFAF7;
-      --card: #FFFFFF;
-      --accent: #8FA499;
-      --accent-hover: #7B9287;
-      --accent-light: rgba(143, 164, 153, 0.12);
-      --accent-medium: rgba(143, 164, 153, 0.45);
-      --text-primary: #2C302E;
-      --text-secondary: #7A827E;
-      --text-muted: #A8B0AB;
-      --border: #F0F2EF;
-      --card-shadow: 0 4px 20px rgba(143, 164, 153, 0.08);
-      --card-shadow-hover: 0 8px 30px rgba(143, 164, 153, 0.14);
-      --pill-shadow: 0 6px 24px rgba(143, 164, 153, 0.35);
-      --radius-card: 24px;
+      --bg: #F7F3ED;
+      --card: #FFFEFB;
+      --accent: #8B9E8B;
+      --accent-hover: #748C74;
+      --accent-light: rgba(139, 158, 139, 0.09);
+      --accent-medium: rgba(139, 158, 139, 0.30);
+      --text-primary: #3A3631;
+      --text-secondary: #8A8279;
+      --text-muted: #B5AFA8;
+      --border: #EDE8E1;
+      --card-shadow: 0 1px 6px rgba(58, 54, 49, 0.04);
+      --card-shadow-hover: 0 4px 14px rgba(58, 54, 49, 0.07);
+      --pill-shadow: 0 4px 14px rgba(139, 158, 139, 0.20);
+      --radius-card: 18px;
       --radius-pill: 50px;
-      --radius-sm: 14px;
+      --radius-sm: 12px;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
-      --warm-orange: #E89D86;
-      --warm-orange-light: rgba(232, 157, 134, 0.12);
-      --warm-orange-dark: #C67B64;
-      --direct-color: #7DA693;
+      --warm-orange: #C4A282;
+      --warm-orange-light: rgba(196, 162, 130, 0.10);
+      --warm-orange-dark: #A07A5A;
+      --direct-color: #8B9E8B;
       --transfer-color: #B29D82;
     }
 
@@ -70,25 +70,24 @@
     /* ── Header ── */
     .header { padding: 56px 0 4px 0; animation: fadeSlideDown 0.6s ease; }
     .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
-    .app-name { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
-    .header-date { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.2px; }
-    .greeting { font-family: 'Outfit', sans-serif; font-size: 30px; font-weight: 700; color: var(--text-primary); margin-top: 10px; line-height: 1.18; letter-spacing: -0.4px; }
-    .greeting-sub { font-size: 14px; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
+    .app-name { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 500; font-style: italic; letter-spacing: 0.5px; text-transform: lowercase; color: var(--accent); }
+    .header-date { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.3px; }
+    .greeting { font-family: 'Playfair Display', Georgia, serif; font-size: 28px; font-weight: 600; color: var(--text-primary); margin-top: 10px; line-height: 1.2; letter-spacing: -0.3px; }
+    .greeting-sub { font-size: 13px; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
 
     /* ── Tab Toggle ── */
     .tab-container { margin: 22px 0 18px 0; animation: fadeSlideDown 0.6s ease 0.1s both; }
     .tab-toggle { display: flex; background: var(--card); border-radius: var(--radius-pill); padding: 5px; box-shadow: var(--card-shadow); border: 1px solid var(--border); }
     .tab-btn {
       flex: 1; padding: 13px 16px; border: none; background: transparent;
-      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-secondary);
+      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-secondary);
       cursor: pointer; border-radius: var(--radius-pill);
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      user-select: none;
+      user-select: none; letter-spacing: 0.3px;
     }
     .tab-btn.active { color: #FFFFFF; background: var(--accent); box-shadow: var(--pill-shadow); }
     .tab-btn:not(.active):hover { color: var(--text-primary); background: var(--accent-light); }
-    .tab-icon { font-size: 16px; line-height: 1; }
 
     /* ── Route Summary Card ── */
     .route-summary {
@@ -96,27 +95,27 @@
       margin-bottom: 18px; box-shadow: var(--card-shadow); border: 1px solid var(--border);
       animation: fadeSlideDown 0.5s ease 0.15s both;
     }
-    .route-summary-title { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; letter-spacing: -0.1px; }
+    .route-summary-title { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 600; font-style: italic; color: var(--text-primary); margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
     .route-journey { display: flex; align-items: center; gap: 0; margin-bottom: 16px; }
-    .route-point { font-size: 11px; font-weight: 700; color: var(--text-primary); max-width: 90px; font-family: 'Outfit', sans-serif; }
+    .route-point { font-size: 11px; font-weight: 700; color: var(--text-primary); max-width: 90px; font-family: 'Plus Jakarta Sans', sans-serif; }
     .route-point.start { text-align: left; margin-right: 8px; }
     .route-point.end { text-align: right; margin-left: 8px; }
-    .route-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .route-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .route-dot.start-dot { background: var(--accent); }
     .route-dot.end-dot { background: var(--warm-orange); }
-    .route-line { flex: 1; height: 2.5px; background: linear-gradient(to right, var(--accent), var(--warm-orange)); position: relative; border-radius: 4px; }
-    .route-line-label { position: absolute; top: -19px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--text-muted); white-space: nowrap; font-weight: 600; }
+    .route-line { flex: 1; height: 1.5px; background: linear-gradient(to right, var(--accent), var(--warm-orange)); position: relative; border-radius: 4px; }
+    .route-line-label { position: absolute; top: -19px; left: 50%; transform: translateX(-50%); font-size: 10px; color: var(--text-muted); white-space: nowrap; font-weight: 500; font-family: 'DM Mono', monospace; }
     .route-chips { display: flex; gap: 8px; flex-wrap: wrap; }
     .route-chip {
       display: inline-flex; align-items: center; gap: 5px;
       padding: 6px 12px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 600; background: var(--bg); color: var(--text-secondary);
+      font-size: 11px; font-weight: 500; background: var(--bg); color: var(--text-secondary);
+      border: 1px solid var(--border);
     }
-    .route-chip .ci { font-size: 13px; }
 
     /* ── Section Divider ── */
     .section-divider {
-      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
       color: var(--text-muted); margin-bottom: 14px; padding-left: 4px;
       display: flex; align-items: center; gap: 10px;
     }
@@ -137,22 +136,24 @@
     .bus-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
     .bus-card.past { opacity: 0.45; filter: grayscale(0.3); }
     .bus-card.past:hover { transform: none; box-shadow: var(--card-shadow); }
-    .bus-card.next-bus { border: 1.5px solid var(--accent); box-shadow: 0 4px 24px rgba(143, 164, 153, 0.2); }
+    .bus-card.next-bus { border: 1.5px solid var(--accent); box-shadow: 0 2px 16px rgba(139, 158, 139, 0.12); }
 
     .bus-left { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
     .bus-number-pill {
-      width: 58px; height: 54px; border-radius: 16px;
+      width: 58px; height: 54px; border-radius: 14px;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 800; color: var(--accent); background: var(--accent-light);
-      letter-spacing: 0.2px; line-height: 1.1; text-align: center;
+      font-family: 'DM Mono', 'Courier New', monospace; font-size: 13px; font-weight: 500; color: var(--accent); background: var(--accent-light);
+      letter-spacing: 0.5px; line-height: 1.1; text-align: center;
+      border: 1px solid rgba(139, 158, 139, 0.08);
     }
-    .bus-number-pill .bus-type-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.5px; opacity: 0.75; margin-top: 2px; }
-    .bus-card.next-bus .bus-number-pill { background: var(--accent); color: #FFFFFF; }
-    .bus-card.transfer .bus-number-pill { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
+    .bus-number-pill .bus-type-label { font-family: 'DM Mono', monospace; font-size: 8px; font-weight: 400; letter-spacing: 0.5px; opacity: 0.65; margin-top: 2px; }
+    .bus-card.next-bus .bus-number-pill { background: var(--accent); color: #FFFFFF; border-color: transparent; }
+    .bus-card.transfer .bus-number-pill { color: var(--transfer-color); background: rgba(178, 157, 130, 0.08); border-color: rgba(178, 157, 130, 0.08); }
 
     .maps-link {
-      font-size: 10px; font-weight: 700; color: var(--accent); text-decoration: none;
-      display: flex; align-items: center; gap: 3px; opacity: 0.8; transition: opacity 0.2s;
+      font-size: 10px; font-weight: 600; color: var(--accent); text-decoration: none;
+      display: flex; align-items: center; gap: 3px; opacity: 0.65; transition: opacity 0.2s;
+      font-family: 'DM Mono', monospace; letter-spacing: 0.3px;
     }
     .maps-link:hover { opacity: 1; }
 
@@ -160,19 +161,20 @@
     .bus-top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; gap: 6px; flex-wrap: wrap; }
     .bus-badge-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
     .next-label {
-      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+      font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase;
       color: #FFFFFF; background: var(--accent); padding: 3px 9px; border-radius: var(--radius-pill);
     }
-    .bus-departure { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.3px; }
+    .bus-departure { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
     .bus-card.past .bus-departure { color: var(--text-muted); }
 
     .bus-stop-row { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
-    .bus-stop-name { font-size: 13px; font-weight: 600; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; }
-    .bus-stop-icon { font-size: 12px; flex-shrink: 0; }
+    .bus-stop-name { font-size: 12.5px; font-weight: 500; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; }
+    .bus-stop-icon { font-size: 11px; flex-shrink: 0; color: var(--text-muted); font-family: 'DM Mono', monospace; }
 
     .bus-transfer-detail {
       font-size: 11px; color: var(--text-secondary); margin-bottom: 8px; padding: 7px 12px;
-      background: rgba(178, 157, 130, 0.08); border-radius: var(--radius-sm); line-height: 1.5; font-weight: 500;
+      background: rgba(178, 157, 130, 0.05); border-radius: var(--radius-sm); line-height: 1.5; font-weight: 500;
+      border: 1px solid rgba(178, 157, 130, 0.08);
     }
     .bus-transfer-detail strong { color: var(--text-primary); font-weight: 700; }
 
@@ -180,32 +182,32 @@
     .countdown-badge {
       display: inline-flex; align-items: center; gap: 4px;
       padding: 4px 11px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 700; background: var(--accent-light); color: var(--accent-hover);
-      white-space: nowrap;
+      font-size: 11px; font-weight: 500; background: var(--accent-light); color: var(--accent-hover);
+      white-space: nowrap; font-family: 'DM Mono', monospace;
     }
     .countdown-badge.urgent { background: var(--warm-orange-light); color: var(--warm-orange-dark); animation: subtlePulse 2s ease-in-out infinite; }
-    .countdown-badge.past-badge { background: rgba(0,0,0,0.04); color: var(--text-muted); }
+    .countdown-badge.past-badge { background: rgba(0,0,0,0.03); color: var(--text-muted); }
     .meta-badge {
       display: inline-flex; align-items: center; gap: 4px;
       padding: 4px 11px; border-radius: var(--radius-pill);
-      font-size: 11px; font-weight: 600; background: var(--bg); color: var(--text-secondary);
+      font-size: 11px; font-weight: 500; background: var(--bg); color: var(--text-secondary);
       white-space: nowrap;
     }
-    .bus-note { font-size: 11px; color: var(--text-muted); margin-top: 6px; font-style: italic; font-weight: 500; }
+    .bus-note { font-size: 11px; color: var(--text-muted); margin-top: 6px; font-style: italic; font-weight: 400; font-family: 'Playfair Display', Georgia, serif; }
 
     .gate-tag {
-      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
-      color: var(--warm-orange-dark); background: rgba(232, 157, 134, 0.15);
+      font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.5px; text-transform: lowercase;
+      color: var(--warm-orange-dark); background: rgba(196, 162, 130, 0.12);
       padding: 3px 9px; border-radius: var(--radius-pill);
     }
     .direct-tag {
-      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
-      color: #5B8272; background: rgba(125, 166, 147, 0.16);
+      font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.5px; text-transform: lowercase;
+      color: #5B7A5B; background: rgba(139, 158, 139, 0.10);
       padding: 3px 9px; border-radius: var(--radius-pill);
     }
     .transfer-tag {
-      font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase;
-      color: var(--transfer-color); background: rgba(178, 157, 130, 0.16);
+      font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 500; letter-spacing: 0.5px; text-transform: lowercase;
+      color: var(--transfer-color); background: rgba(178, 157, 130, 0.10);
       padding: 3px 9px; border-radius: var(--radius-pill);
     }
 
@@ -229,28 +231,27 @@
       border-radius: var(--radius-card); box-shadow: var(--card-shadow); border: 1px solid var(--border);
       animation: fadeSlideDown 0.5s ease 0.4s both;
     }
-    .guide-title { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .guide-title { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 600; font-style: italic; color: var(--text-secondary); margin-bottom: 16px; }
     .guide-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; }
     .guide-item:not(:last-child) { border-bottom: 1px solid var(--border); }
     .guide-pill {
       width: 72px; padding: 10px 6px; border-radius: var(--radius-sm);
-      font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 800; text-align: center; flex-shrink: 0;
+      font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; text-align: center; flex-shrink: 0;
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-      line-height: 1.25; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+      line-height: 1.25;
     }
-    .guide-pill.direct { color: var(--direct-color); background: rgba(125, 166, 147, 0.12); }
-    .guide-pill.transfer { color: var(--transfer-color); background: rgba(178, 157, 130, 0.12); }
+    .guide-pill.direct { color: var(--direct-color); background: rgba(139, 158, 139, 0.08); border: 1px solid rgba(139, 158, 139, 0.08); }
+    .guide-pill.transfer { color: var(--transfer-color); background: rgba(178, 157, 130, 0.08); border: 1px solid rgba(178, 157, 130, 0.08); }
     .guide-info { flex: 1; min-width: 0; }
-    .guide-route-name { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .guide-route-name { font-family: 'Playfair Display', Georgia, serif; font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
     .guide-route-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; font-weight: 500; }
-    .guide-tag { display: inline-block; font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 9px; border-radius: var(--radius-pill); margin-top: 8px; }
-    .guide-tag.d { color: #5B8272; background: rgba(125, 166, 147, 0.15); }
-    .guide-tag.t { color: var(--transfer-color); background: rgba(178, 157, 130, 0.15); }
+    .guide-tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.3px; text-transform: lowercase; padding: 4px 9px; border-radius: var(--radius-pill); margin-top: 8px; }
+    .guide-tag.d { color: #5B7A5B; background: rgba(139, 158, 139, 0.08); }
+    .guide-tag.t { color: var(--transfer-color); background: rgba(178, 157, 130, 0.08); }
 
     /* ── No Buses ── */
     .no-buses { text-align: center; padding: 40px 24px; animation: fadeSlideDown 0.5s ease; }
-    .no-buses-emoji { font-size: 44px; margin-bottom: 14px; }
-    .no-buses-title { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+    .no-buses-title { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 600; font-style: italic; color: var(--text-primary); margin-bottom: 8px; }
     .no-buses-text { font-size: 13px; color: var(--text-secondary); line-height: 1.6; font-weight: 500; }
     .no-buses-tip { margin-top: 16px; padding: 12px 16px; background: var(--accent-light); border-radius: var(--radius-sm); font-size: 12px; color: var(--accent-hover); font-weight: 600; }
 
@@ -259,18 +260,18 @@
     .wa-btn {
       display: flex; align-items: center; gap: 8px; padding: 16px 38px;
       background: var(--accent); color: #FFFFFF; border: none; border-radius: var(--radius-pill);
-      font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
-      box-shadow: var(--pill-shadow), 0 8px 32px rgba(143, 164, 153, 0.25);
+      font-family: 'Playfair Display', Georgia, serif; font-size: 15px; font-weight: 500; font-style: italic; cursor: pointer;
+      box-shadow: var(--pill-shadow), 0 4px 20px rgba(139, 158, 139, 0.15);
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); user-select: none; white-space: nowrap;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
     }
     .wa-btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
-    .wa-btn:active { transform: scale(0.95); box-shadow: 0 2px 12px rgba(143, 164, 153, 0.3); }
+    .wa-btn:active { transform: scale(0.95); box-shadow: 0 2px 12px rgba(139, 158, 139, 0.2); }
 
     /* ── Install Banner ── */
     .install-banner { display: none; margin-top: 20px; padding: 18px 20px; background: var(--card); border-radius: var(--radius-card); box-shadow: var(--card-shadow); border: 1px solid var(--border); }
     .install-banner.show { display: block; }
-    .install-banner-title { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+    .install-banner-title { font-family: 'Playfair Display', Georgia, serif; font-size: 14px; font-weight: 600; font-style: italic; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
     .install-banner-text { font-size: 13px; color: var(--text-secondary); line-height: 1.5; font-weight: 500; }
     .install-dismiss { margin-top: 12px; padding: 8px 18px; background: var(--accent-light); border: none; border-radius: var(--radius-pill); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; color: var(--accent); cursor: pointer; }
 
@@ -291,7 +292,7 @@
     .bus-card:nth-child(10) { animation-delay: 0.5s; }
     ::-webkit-scrollbar { width: 0; }
     @media (max-width: 360px) {
-      .greeting { font-size: 26px; }
+      .greeting { font-size: 24px; }
       .bus-card { padding: 15px 15px; gap: 12px; }
       .bus-number-pill { width: 50px; height: 48px; font-size: 12px; }
       .wa-btn { padding: 14px 30px; font-size: 14px; }
@@ -303,7 +304,7 @@
   <div class="app">
     <header class="header">
       <div class="header-top">
-        <span class="app-name">Ani's Ride</span>
+        <span class="app-name">ani's ride</span>
         <span class="header-date" id="headerDate"></span>
       </div>
       <h1 class="greeting" id="greeting"></h1>
@@ -313,10 +314,10 @@
     <nav class="tab-container">
       <div class="tab-toggle">
         <button class="tab-btn active" id="tabCollege" onclick="switchTab('college')">
-          <span class="tab-icon">🎓</span> To College
+          to college
         </button>
         <button class="tab-btn" id="tabHome" onclick="switchTab('home')">
-          <span class="tab-icon">🏠</span> To Home
+          to home
         </button>
       </div>
     </nav>
@@ -327,8 +328,8 @@
       <div class="bus-list" id="busList"></div>
       <div class="past-section" id="pastSection" style="display:none;">
         <button class="past-toggle" id="pastToggle" onclick="togglePast()">
-          <span class="past-toggle-icon" id="pastIcon">▸</span>
-          <span id="pastText">Past Buses</span>
+          <span class="past-toggle-icon" id="pastIcon">&#9656;</span>
+          <span id="pastText">past buses</span>
         </button>
         <div class="past-buses-list" id="pastList"></div>
       </div>
@@ -337,173 +338,164 @@
     <div class="route-guide" id="routeGuide"></div>
 
     <div class="install-banner" id="installBanner">
-      <div class="install-banner-title">📱 Add to Home Screen</div>
+      <div class="install-banner-title">add to home screen</div>
       <p class="install-banner-text">
-        Tap <strong>Share</strong> → <strong>"Add to Home Screen"</strong> in Safari to use this like a real app!
+        Tap <strong>Share</strong> &rarr; <strong>"Add to Home Screen"</strong> in Safari to use this like a real app.
       </p>
-      <button class="install-dismiss" onclick="dismissInstall()">Got it!</button>
+      <button class="install-dismiss" onclick="dismissInstall()">got it</button>
     </div>
   </div>
 
   <div class="wa-wrap">
-    <button class="wa-btn" onclick="sendReached()">Reached 🤍</button>
+    <button class="wa-btn" onclick="sendReached()">reached 🤍</button>
   </div>
 
   <script>
     // ═══════════════════════════════════════════════════════
-    //  BUS SCHEDULE — REALISTIC GOOGLE MAPS BUS STOPS & ROUTES
+    //  BUS SCHEDULE DATA
     // ═══════════════════════════════════════════════════════
 
-    // Google Maps Direct Navigation Links
     const MAPS_LINKS = {
-      // Walking from Home
       walkToHMTHospital: "https://www.google.com/maps/dir/?api=1&origin=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&destination=HMT+Hospital+Bus+Stop,+Jalahalli+Road,+Bengaluru&travelmode=walking",
       walkToJalahalliVillage: "https://www.google.com/maps/dir/?api=1&origin=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&destination=Jalahalli+Village+Bus+Stop,+Bengaluru&travelmode=walking",
-      // Walking near College
       walkFromStopToCollege: "https://www.google.com/maps/dir/?api=1&origin=MS+Ramaiah+College+Bus+Stop,+Mathikere,+Bengaluru&destination=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&travelmode=walking",
       walkFromCollegeToStop: "https://www.google.com/maps/dir/?api=1&origin=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&destination=MS+Ramaiah+College+Bus+Stop,+Mathikere,+Bengaluru&travelmode=walking",
       walkFromHMTToHome: "https://www.google.com/maps/dir/?api=1&origin=HMT+Hospital+Bus+Stop,+Jalahalli+Road,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=walking",
       walkFromJalahalliToHome: "https://www.google.com/maps/dir/?api=1&origin=Jalahalli+Village+Bus+Stop,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=walking",
-      // Full transit routes
       transitFullCollege: "https://www.google.com/maps/dir/?api=1&origin=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&destination=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&travelmode=transit",
       transitFullHome: "https://www.google.com/maps/dir/?api=1&origin=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=transit",
     };
 
     // ── SCHEDULE DATA ──
-    // Two boarding stops near home:
-    //   🏥 HMT Hospital Stop (~400m / 5 min walk) — 273-B & 276 direct
-    //   🚏 Jalahalli Village Stop (~300m / 3 min walk) — 273 direct + transfers
-    // Timings are approximate (~every 15-20 min), based on BMTC frequency data
-
     const SCHEDULE_TO_COLLEGE = [
       // ── 7:00 AM – 7:30 AM ──
       { bus: "273-B", stop: "HMT Hospital Stop", time: "07:00 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B from HMT Hospital Stop → Main Gate" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
       { bus: "276", stop: "HMT Hospital Stop", time: "07:15 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 via New BEL Rd → Gate 10/11 (Back Gate)" },
+        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
       { bus: "273-B", stop: "HMT Hospital Stop", time: "07:20 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B from HMT Hospital Stop → Main Gate" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "07:25 AM", walkMin: 3, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 16, gate: "Main Gate",
-        note: "Direct 273 from Jalahalli Village Stop → College" },
+        alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
+        note: "Direct 273 from Jalahalli Village Stop \u2192 College" },
 
       // ── 7:30 AM – 8:00 AM ──
       { bus: "276", stop: "HMT Hospital Stop", time: "07:35 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 via New BEL Rd → Gate 10/11 (Back Gate)" },
+        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
       { bus: "273-B", stop: "HMT Hospital Stop", time: "07:40 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B from HMT Hospital Stop → Main Gate" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "07:50 AM", walkMin: 3, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 16, gate: "Main Gate",
+        alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 from Jalahalli Village Stop" },
       { bus: "276", stop: "HMT Hospital Stop", time: "07:55 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 via New BEL Rd → Gate 10/11 (Back Gate)" },
+        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
       { bus: "501-NH", stop: "Jalahalli Village Stop", time: "07:58 AM", walkMin: 3, type: "transfer",
         alight: "MS Ramaiah College Stop", ride: 14, connector: "501-NH", secondBus: "401-K",
-        transferNote: "501-NH → BEL Circle (4 min) → 401-K → MS Ramaiah College (7 min)",
+        transferNote: "501-NH \u2192 BEL Circle (4 min) \u2192 401-K \u2192 MS Ramaiah College (7 min)",
         note: "Transfer via BEL Circle (~25 min total)" },
 
       // ── 8:00 AM – 8:30 AM ──
       { bus: "273-B", stop: "HMT Hospital Stop", time: "08:00 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B — arrive by ~8:30 AM" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B \u2014 arrive by ~8:30 AM" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "08:10 AM", walkMin: 3, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 16, gate: "Main Gate",
+        alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 from Jalahalli Village Stop" },
       { bus: "276", stop: "HMT Hospital Stop", time: "08:15 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 via New BEL Rd → Gate 10/11 (Back Gate)" },
+        alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
       { bus: "273-B", stop: "HMT Hospital Stop", time: "08:20 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B — arrive ~8:50, just in time for 9 AM" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B \u2014 arrive ~8:50, just in time for 9 AM" },
       { bus: "502-E", stop: "Jalahalli Village Stop", time: "08:25 AM", walkMin: 3, type: "transfer",
         alight: "MS Ramaiah College Stop", ride: 19, connector: "502-E", secondBus: "273-C",
-        transferNote: "502-E → BEL Circle (4 min) → 273-C → MS Ramaiah College (12 min)",
+        transferNote: "502-E \u2192 BEL Circle (4 min) \u2192 273-C \u2192 MS Ramaiah College (12 min)",
         note: "Transfer via BEL Circle (~26 min total)" },
 
       // ── 8:30 AM – 9:00 AM ──
       { bus: "273", stop: "Jalahalli Village Stop", time: "08:30 AM", walkMin: 3, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 16, gate: "Main Gate",
-        note: "Direct 273 — last direct for 9 AM class" },
+        alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
+        note: "Direct 273 \u2014 last direct for 9 AM class" },
       { bus: "502-C", stop: "Jalahalli Village Stop", time: "08:35 AM", walkMin: 3, type: "transfer",
         alight: "MS Ramaiah College Stop", ride: 14, connector: "502-C", secondBus: "401-K",
-        transferNote: "502-C → BEL Circle (4 min) → 401-K → MS Ramaiah College (7 min)",
+        transferNote: "502-C \u2192 BEL Circle (4 min) \u2192 401-K \u2192 MS Ramaiah College (7 min)",
         note: "Last transfer option for 9 AM class" },
       { bus: "273-B", stop: "HMT Hospital Stop", time: "08:40 AM", walkMin: 5, type: "direct",
-        alight: "MS Ramaiah College Stop", ride: 25, gate: "Main Gate",
-        note: "Late 273-B — reach by ~9:10" },
+        alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
+        note: "Late 273-B \u2014 reach by ~9:10" },
     ];
 
     const SCHEDULE_TO_HOME = [
       // ── 2:00 PM – 3:00 PM ──
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "02:30 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B home — board near Main Gate → drop at HMT Hospital Stop" },
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B home \u2014 board near Gate 10/11 \u2192 drop at HMT Hospital Stop" },
       { bus: "276", stop: "MS Ramaiah Hospital Stop", time: "02:50 PM", walkMin: 4, type: "direct",
-        alight: "HMT Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 home — board near Gate 10/11 (New BEL Rd) → drop at HMT Hospital Stop" },
+        alight: "HMT Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 home \u2014 board near Main Gate \u2192 drop at HMT Hospital Stop" },
       { bus: "273", stop: "MS Ramaiah College Stop", time: "02:55 PM", walkMin: 5, type: "direct",
-        alight: "Jalahalli Village Stop", ride: 16, gate: "Main Gate",
-        note: "Direct 273 home → drop at Jalahalli Village Stop" },
+        alight: "Jalahalli Village Stop", ride: 16, gate: "Gate 10/11",
+        note: "Direct 273 home \u2192 drop at Jalahalli Village Stop" },
 
       // ── 3:00 PM – 4:00 PM ──
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "03:00 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B home → drop at HMT Hospital Stop" },
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B home \u2192 drop at HMT Hospital Stop" },
       { bus: "273", stop: "MS Ramaiah College Stop", time: "03:15 PM", walkMin: 5, type: "direct",
-        alight: "Jalahalli Village Stop", ride: 16, gate: "Main Gate",
-        note: "Direct 273 home → drop at Jalahalli Village Stop" },
+        alight: "Jalahalli Village Stop", ride: 16, gate: "Gate 10/11",
+        note: "Direct 273 home \u2192 drop at Jalahalli Village Stop" },
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "03:20 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B home" },
       { bus: "276", stop: "MS Ramaiah Hospital Stop", time: "03:30 PM", walkMin: 4, type: "direct",
-        alight: "HMT Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 home from Gate 10/11 side (New BEL Rd)" },
+        alight: "HMT Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 home from Main Gate side (New BEL Rd)" },
       { bus: "401-K", stop: "MS Ramaiah College Stop", time: "03:40 PM", walkMin: 5, type: "transfer",
         alight: "Jalahalli Village Stop", ride: 14, connector: "401-K", secondBus: "502-C",
-        transferNote: "401-K → BEL Circle (7 min) → 502-C → Jalahalli Village (4 min)",
+        transferNote: "401-K \u2192 BEL Circle (7 min) \u2192 502-C \u2192 Jalahalli Village (4 min)",
         note: "Transfer via BEL Circle" },
       { bus: "273", stop: "MS Ramaiah College Stop", time: "03:45 PM", walkMin: 5, type: "direct",
-        alight: "Jalahalli Village Stop", ride: 16, gate: "Main Gate",
+        alight: "Jalahalli Village Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 home" },
 
       // ── 4:00 PM – 5:00 PM ──
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "04:00 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B — evening bus home" },
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B \u2014 evening bus home" },
       { bus: "273", stop: "MS Ramaiah College Stop", time: "04:15 PM", walkMin: 5, type: "direct",
-        alight: "Jalahalli Village Stop", ride: 16, gate: "Main Gate",
+        alight: "Jalahalli Village Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 home" },
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "04:20 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B home" },
       { bus: "401-K", stop: "MS Ramaiah College Stop", time: "04:30 PM", walkMin: 5, type: "transfer",
         alight: "Jalahalli Village Stop", ride: 14, connector: "401-K", secondBus: "502-E",
-        transferNote: "401-K → BEL Circle (7 min) → 502-E → Jalahalli Village (4 min)",
+        transferNote: "401-K \u2192 BEL Circle (7 min) \u2192 502-E \u2192 Jalahalli Village (4 min)",
         note: "Transfer via BEL Circle" },
       { bus: "276", stop: "MS Ramaiah Hospital Stop", time: "04:50 PM", walkMin: 4, type: "direct",
-        alight: "HMT Hospital Stop", ride: 22, gate: "Gate 10/11",
-        note: "Direct 276 home from Gate 10/11 side (New BEL Rd)" },
+        alight: "HMT Hospital Stop", ride: 22, gate: "Main Gate",
+        note: "Direct 276 home from Main Gate side (New BEL Rd)" },
 
       // ── 5:00 PM – 6:00 PM ──
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "05:00 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B — late evening home" },
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B \u2014 late evening home" },
       { bus: "273", stop: "MS Ramaiah College Stop", time: "05:15 PM", walkMin: 5, type: "direct",
-        alight: "Jalahalli Village Stop", ride: 16, gate: "Main Gate",
-        note: "Direct 273 — late evening bus" },
+        alight: "Jalahalli Village Stop", ride: 16, gate: "Gate 10/11",
+        note: "Direct 273 \u2014 late evening bus" },
       { bus: "273-B", stop: "MS Ramaiah College Stop", time: "05:30 PM", walkMin: 5, type: "direct",
-        alight: "HMT Hospital Stop", ride: 25, gate: "Main Gate",
-        note: "Direct 273-B — last evening bus" },
+        alight: "HMT Hospital Stop", ride: 25, gate: "Gate 10/11",
+        note: "Direct 273-B \u2014 last evening bus" },
     ];
 
     // ═══════════════════════════════════════════════════════
-    //  WHATSAPP — Sharvesh's number & message
+    //  WHATSAPP
     // ═══════════════════════════════════════════════════════
     const WA_PHONE = "919448176034";
     const WA_MSG = "I reached loveyy";
@@ -527,8 +519,8 @@
     }
     function minsUntil(t) { return Math.round((parseTime(t) - new Date()) / 60000); }
     function fmtCountdown(m) {
-      if (m <= 0) return { text: "Departed", past: true, urgent: false };
-      if (m <= 5) return { text: `${m} min — hurry!`, past: false, urgent: true };
+      if (m <= 0) return { text: "departed", past: true, urgent: false };
+      if (m <= 5) return { text: `${m} min \u2014 hurry!`, past: false, urgent: true };
       if (m < 60) return { text: `in ${m} min`, past: false, urgent: false };
       const h = Math.floor(m / 60), r = m % 60;
       return { text: r ? `in ${h}h ${r}m` : `in ${h}h`, past: false, urgent: false };
@@ -549,17 +541,17 @@
     }
 
     // ═══════════════════════════════════════════════════════
-    //  GREETING — Randomly toggles between "Ani" and "you"
+    //  GREETING
     // ═══════════════════════════════════════════════════════
     function updateGreeting() {
       const h = new Date().getHours();
       const g = document.getElementById('greeting');
       const s = document.getElementById('greetingSub');
       const name = Math.random() < 0.5 ? 'Ani' : 'you';
-      if (h >= 5 && h < 12) { g.textContent = `Good morning, ${name} ☀️`; s.textContent = "Here are your buses to college"; }
-      else if (h >= 12 && h < 17) { g.textContent = `Good afternoon, ${name} 🌤`; s.textContent = "Ready to head home?"; }
-      else if (h >= 17 && h < 21) { g.textContent = `Good evening, ${name} 🌙`; s.textContent = "Catch your ride back"; }
-      else { g.textContent = `Hey ${name} 💫`; s.textContent = "Planning tomorrow's commute?"; }
+      if (h >= 5 && h < 12) { g.textContent = `good morning, ${name} \u2600\uFE0F`; s.textContent = "here are your buses today"; }
+      else if (h >= 12 && h < 17) { g.textContent = `good afternoon, ${name}`; s.textContent = "ready to head home?"; }
+      else if (h >= 17 && h < 21) { g.textContent = `good evening, ${name}`; s.textContent = "catch your ride back"; }
+      else { g.textContent = `hey ${name}`; s.textContent = "planning tomorrow's commute?"; }
       document.getElementById('headerDate').textContent = fmtDate();
     }
 
@@ -570,35 +562,35 @@
       const el = document.getElementById('routeSummary');
       const c = currentTab === 'college';
       el.innerHTML = `
-        <div class="route-summary-title">${c ? '📍' : '🏠'} Your commute</div>
+        <div class="route-summary-title">your commute</div>
         <div class="route-journey">
           <div class="route-point start">${c ? 'Vinyaas Virtue' : 'College'}</div>
           <div class="route-dot start-dot"></div>
-          <div class="route-line"><div class="route-line-label">🚌 ~16–25 min ride</div></div>
+          <div class="route-line"><div class="route-line-label">~16\u201325 min ride</div></div>
           <div class="route-dot end-dot"></div>
           <div class="route-point end">${c ? 'College' : 'Vinyaas Virtue'}</div>
         </div>
         <div class="route-chips">
-          <div class="route-chip"><span class="ci">🏥</span> HMT Hospital (5 min walk)</div>
-          <div class="route-chip"><span class="ci">🚏</span> Jalahalli Village (3 min walk)</div>
-          <div class="route-chip"><span class="ci">🔄</span> Transfers at BEL Circle</div>
+          <div class="route-chip">HMT Hospital \u00b7 5 min walk</div>
+          <div class="route-chip">Jalahalli Village \u00b7 3 min walk</div>
+          <div class="route-chip">Transfers at BEL Circle</div>
         </div>
         <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
           <a href="${MAPS_LINKS.walkToHMTHospital}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
-            🏥 HMT Hospital Stop (5 min)
+            HMT Hospital Stop \u00b7 5 min
           </a>
           <a href="${MAPS_LINKS.walkToJalahalliVillage}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
-            🚏 Jalahalli Village (3 min)
+            Jalahalli Village \u00b7 3 min
           </a>
           <a href="${c ? MAPS_LINKS.walkFromStopToCollege : MAPS_LINKS.walkFromCollegeToStop}" target="_blank"
-             style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(232,157,134,0.15);color:var(--warm-orange-dark);text-decoration:none;">
-            ${c ? '🏫 Stop → College' : '🏫 College → Stop'}
+             style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--warm-orange-light);color:var(--warm-orange-dark);text-decoration:none;">
+            ${c ? 'stop \u2192 college' : 'college \u2192 stop'}
           </a>
           <a href="${c ? MAPS_LINKS.transitFullCollege : MAPS_LINKS.transitFullHome}" target="_blank"
-             style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(178,157,130,0.12);color:var(--transfer-color);text-decoration:none;">
-            🗺 Google Maps Live
+             style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:rgba(178,157,130,0.10);color:var(--transfer-color);text-decoration:none;">
+            google maps live
           </a>
         </div>
       `;
@@ -633,11 +625,10 @@
 
       if (up.length === 0) {
         bl.innerHTML = `<div class="no-buses">
-          <div class="no-buses-emoji">${currentTab === 'college' ? '📚' : '🏡'}</div>
-          <div class="no-buses-title">No more buses today</div>
-          <div class="no-buses-text">${currentTab === 'college' ? 'All morning buses have left. Check "To Home" for your return!' : 'All evening buses have gone. See you tomorrow! 💛'}</div>
+          <div class="no-buses-title">no more buses today</div>
+          <div class="no-buses-text">${currentTab === 'college' ? 'all morning buses have left \u2014 check "to home" for your return' : 'all evening buses have gone, see you tomorrow'}</div>
           <div class="no-buses-tip">
-            💡 <a href="${fullLink}" target="_blank" style="color:inherit;text-decoration:underline;">Check Google Maps Live</a> for real-time options!
+            <a href="${fullLink}" target="_blank" style="color:inherit;text-decoration:underline;">check google maps</a> for real-time options
           </div>
         </div>`;
       } else {
@@ -648,8 +639,8 @@
 
         if (directBuses.length > 0) {
           const directHeading = currentTab === 'college'
-            ? '🟢 Direct buses (273-B / 276 / 273)'
-            : '🟢 Direct buses home';
+            ? 'Direct Buses'
+            : 'Direct Buses Home';
           html += `<div class="section-divider">${directHeading}<div class="section-divider-line"></div></div>`;
           html += directBuses.map((b, i) => {
             const isNext = !firstDone;
@@ -659,8 +650,8 @@
         }
         if (transferBuses.length > 0) {
           const transferHeading = currentTab === 'college'
-            ? '🔄 Transfers via BEL Circle (from Jalahalli Village Stop)'
-            : '🔄 Transfers via BEL Circle (to Jalahalli Village Stop)';
+            ? 'Transfers via BEL Circle'
+            : 'Transfers via BEL Circle';
           html += `<div class="section-divider" style="margin-top:16px">${transferHeading}<div class="section-divider-line"></div></div>`;
           html += transferBuses.map((b, i) => {
             const isNext = !firstDone;
@@ -673,7 +664,7 @@
 
       if (pa.length > 0) {
         ps.style.display = 'block';
-        document.getElementById('pastText').textContent = `Past Buses (${pa.length})`;
+        document.getElementById('pastText').textContent = `past buses (${pa.length})`;
         document.getElementById('pastIcon').classList.toggle('open', pastOpen);
         pl.classList.toggle('show', pastOpen);
         pl.innerHTML = pa.map(b => renderCard(b, false, true)).join('');
@@ -697,9 +688,8 @@
       const from = bus.stop;
       const to = bus.alight;
 
-      // For transfer buses, show the 2-bus combo in the pill
       const pillContent = bus.type === 'transfer'
-        ? `${bus.connector}<div class="bus-type-label">→ ${bus.secondBus}</div>`
+        ? `${bus.connector}<div class="bus-type-label">\u2192 ${bus.secondBus}</div>`
         : bus.bus;
 
       return `<div class="${cls.join(' ')}">
@@ -707,29 +697,29 @@
           <div class="bus-number-pill">
             ${pillContent}
           </div>
-          ${!isPast ? `<a href="${mapsUrl(from, to)}" target="_blank" class="maps-link">📍 Map</a>` : ''}
+          ${!isPast ? `<a href="${mapsUrl(from, to)}" target="_blank" class="maps-link">map \u2192</a>` : ''}
         </div>
         <div class="bus-info">
           <div class="bus-top-row">
             <div class="bus-departure">${bus.time}</div>
             <div class="bus-badge-group">
-              ${isNext ? '<span class="next-label">NEXT</span>' : ''}
+              ${isNext ? '<span class="next-label">next</span>' : ''}
               ${bus.gate ? `<span class="gate-tag">${bus.gate}</span>` : ''}
-              ${bus.type === 'direct' ? '<span class="direct-tag">Direct</span>' : '<span class="transfer-tag">Via BEL Circle</span>'}
+              ${bus.type === 'direct' ? '<span class="direct-tag">direct</span>' : '<span class="transfer-tag">via bel circle</span>'}
             </div>
           </div>
           <div class="bus-stop-row">
-            <span class="bus-stop-icon">🚏</span>
-            <span class="bus-stop-name">Board at <strong>${bus.stop}</strong> → Get off at <strong>${bus.alight}</strong></span>
+            <span class="bus-stop-icon">\u2192</span>
+            <span class="bus-stop-name">Board at <strong>${bus.stop}</strong> \u00b7 get off at <strong>${bus.alight}</strong></span>
           </div>
-          ${bus.transferNote && !isPast ? `<div class="bus-transfer-detail">🔄 ${bus.transferNote}</div>` : ''}
+          ${bus.transferNote && !isPast ? `<div class="bus-transfer-detail">${bus.transferNote}</div>` : ''}
           <div class="bus-meta-row">
-            <span class="${badge}">${cd.past ? '✓ ' : '⏱ '}${cd.text}</span>
-            ${!isPast && !cd.past ? `<span class="meta-badge">🚶‍♀️ Leave by ${leaveBy} (${bus.walkMin}m walk)</span>` : ''}
+            <span class="${badge}">${cd.text}</span>
+            ${!isPast && !cd.past ? `<span class="meta-badge">leave by ${leaveBy} \u00b7 ${bus.walkMin}m walk</span>` : ''}
           </div>
           ${!isPast && !cd.past ? `<div class="bus-meta-row" style="margin-top:4px">
-            <span class="meta-badge">📍 Reach by ~${arriveBy}</span>
-            <span class="meta-badge">🚌 ~${bus.ride} min total</span>
+            <span class="meta-badge">reach by ~${arriveBy}</span>
+            <span class="meta-badge">~${bus.ride} min ride</span>
           </div>` : ''}
           ${bus.note ? `<div class="bus-note">${bus.note}</div>` : ''}
         </div>
@@ -743,88 +733,84 @@
       const el = document.getElementById('routeGuide');
       const c = currentTab === 'college';
       el.innerHTML = `
-        <div class="guide-title">🗺 Route Guide (Google Maps Verified)</div>
+        <div class="guide-title">route guide</div>
 
         <div class="guide-item">
           <div class="guide-pill direct">
-            <span>🏥</span>
             <span>273-B</span>
-            <span style="font-size:8.5px;opacity:0.85;">or 276</span>
+            <span style="font-size:8.5px;opacity:0.65;">or 276</span>
           </div>
           <div class="guide-info">
-            <div class="guide-route-name">1. HMT Hospital Direct Route (273-B / 276)</div>
+            <div class="guide-route-name">HMT Hospital Direct Route</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>Step 1:</strong> Walk to <strong>HMT Hospital Stop</strong> (~400m / 5 min)<br>
-                   <strong>Step 2:</strong> Board <strong>273-B</strong> (to Main Gate) or <strong>276</strong> (via New BEL Rd to Gate 10/11)<br>
-                   <strong>Step 3:</strong> Get off at <strong>MS Ramaiah College Stop</strong> or <strong>Hospital Stop</strong> (~22–25 min ride)<br>
-                   <strong>Step 4:</strong> Walk to campus (~5 min)`
-                : `<strong>Step 1:</strong> Walk to <strong>MS Ramaiah College Stop</strong> (Main Gate) or <strong>Hospital Stop</strong> (Gate 10/11)<br>
-                   <strong>Step 2:</strong> Board <strong>273-B</strong> or <strong>276</strong> toward Jalahalli<br>
-                   <strong>Step 3:</strong> Get off at <strong>HMT Hospital Stop</strong> (~22–25 min ride)<br>
-                   <strong>Step 4:</strong> Walk home (~5 min)`}
+                ? `<strong>1.</strong> Walk to <strong>HMT Hospital Stop</strong> \u00b7 ~400m / 5 min<br>
+                   <strong>2.</strong> Board <strong>273-B</strong> (to Gate 10/11) or <strong>276</strong> (via New BEL Rd to Main Gate)<br>
+                   <strong>3.</strong> Get off at <strong>MS Ramaiah College Stop</strong> or <strong>Hospital Stop</strong> \u00b7 ~22\u201325 min ride<br>
+                   <strong>4.</strong> Walk to campus \u00b7 ~5 min`
+                : `<strong>1.</strong> Walk to <strong>MS Ramaiah College Stop</strong> (Gate 10/11) or <strong>Hospital Stop</strong> (Main Gate)<br>
+                   <strong>2.</strong> Board <strong>273-B</strong> or <strong>276</strong> toward Jalahalli<br>
+                   <strong>3.</strong> Get off at <strong>HMT Hospital Stop</strong> \u00b7 ~22\u201325 min ride<br>
+                   <strong>4.</strong> Walk home \u00b7 ~5 min`}
             </div>
-            <span class="guide-tag d">✅ Direct from HMT Hospital Stop (~25 min total)</span>
+            <span class="guide-tag d">direct from HMT Hospital Stop \u00b7 ~25 min total</span>
           </div>
         </div>
 
         <div class="guide-item">
           <div class="guide-pill direct">
-            <span>🚌</span>
             <span>273</span>
           </div>
           <div class="guide-info">
-            <div class="guide-route-name">2. Jalahalli Village Direct Route (Bus 273)</div>
+            <div class="guide-route-name">Jalahalli Village Direct Route</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>Step 1:</strong> Walk to <strong>Jalahalli Village Stop</strong> (~300m / 3 min)<br>
-                   <strong>Step 2:</strong> Board <strong>273</strong><br>
-                   <strong>Step 3:</strong> Get off at <strong>MS Ramaiah College Stop</strong> (~16 min ride)<br>
-                   <strong>Step 4:</strong> Walk to campus (~5 min)`
-                : `<strong>Step 1:</strong> Walk to <strong>MS Ramaiah College Stop</strong> (~5 min from campus)<br>
-                   <strong>Step 2:</strong> Board <strong>273</strong> toward Jalahalli<br>
-                   <strong>Step 3:</strong> Get off at <strong>Jalahalli Village Stop</strong> (~16 min)<br>
-                   <strong>Step 4:</strong> Walk home (~3 min)`}
+                ? `<strong>1.</strong> Walk to <strong>Jalahalli Village Stop</strong> \u00b7 ~300m / 3 min<br>
+                   <strong>2.</strong> Board <strong>273</strong><br>
+                   <strong>3.</strong> Get off at <strong>MS Ramaiah College Stop</strong> \u00b7 ~16 min ride<br>
+                   <strong>4.</strong> Walk to campus \u00b7 ~5 min`
+                : `<strong>1.</strong> Walk to <strong>MS Ramaiah College Stop</strong> \u00b7 ~5 min from campus<br>
+                   <strong>2.</strong> Board <strong>273</strong> toward Jalahalli<br>
+                   <strong>3.</strong> Get off at <strong>Jalahalli Village Stop</strong> \u00b7 ~16 min<br>
+                   <strong>4.</strong> Walk home \u00b7 ~3 min`}
             </div>
-            <span class="guide-tag d">⚡ Shortest Walk from Home (3 min walk)</span>
+            <span class="guide-tag d">shortest walk from home \u00b7 3 min</span>
           </div>
         </div>
 
         <div class="guide-item">
           <div class="guide-pill transfer">
-            <span>🔄</span>
             <span>502 / 501</span>
-            <span style="font-size:8.5px;opacity:0.85;">Transfer</span>
+            <span style="font-size:8.5px;opacity:0.65;">transfer</span>
           </div>
           <div class="guide-info">
-            <div class="guide-route-name">3. Transfer Route via BEL Circle</div>
+            <div class="guide-route-name">Transfer Route via BEL Circle</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>Step 1:</strong> Walk to <strong>Jalahalli Village Stop</strong> (~3 min)<br>
-                   <strong>Step 2:</strong> Board <strong>502-C</strong>, <strong>502-E</strong>, or <strong>501-NH</strong> → <strong>BEL Circle</strong> (4 min)<br>
-                   <strong>Step 3:</strong> Switch to <strong>273-C</strong> or <strong>401-K</strong> → <strong>MS Ramaiah College Stop</strong> (7-12 min)<br>
-                   <strong>Step 4:</strong> Walk to campus (~5 min)`
-                : `<strong>Step 1:</strong> Walk to <strong>MS Ramaiah College Stop</strong> (~5 min)<br>
-                   <strong>Step 2:</strong> Board <strong>273-C</strong> or <strong>401-K</strong> → <strong>BEL Circle</strong> (7-12 min)<br>
-                   <strong>Step 3:</strong> Switch to <strong>502-C</strong>, <strong>502-E</strong>, or <strong>501-NH</strong> → <strong>Jalahalli Village Stop</strong> (4 min)<br>
-                   <strong>Step 4:</strong> Walk home (~3 min)`}
+                ? `<strong>1.</strong> Walk to <strong>Jalahalli Village Stop</strong> \u00b7 ~3 min<br>
+                   <strong>2.</strong> Board <strong>502-C</strong>, <strong>502-E</strong>, or <strong>501-NH</strong> \u2192 <strong>BEL Circle</strong> \u00b7 4 min<br>
+                   <strong>3.</strong> Switch to <strong>273-C</strong> or <strong>401-K</strong> \u2192 <strong>MS Ramaiah College Stop</strong> \u00b7 7-12 min<br>
+                   <strong>4.</strong> Walk to campus \u00b7 ~5 min`
+                : `<strong>1.</strong> Walk to <strong>MS Ramaiah College Stop</strong> \u00b7 ~5 min<br>
+                   <strong>2.</strong> Board <strong>273-C</strong> or <strong>401-K</strong> \u2192 <strong>BEL Circle</strong> \u00b7 7-12 min<br>
+                   <strong>3.</strong> Switch to <strong>502-C</strong>, <strong>502-E</strong>, or <strong>501-NH</strong> \u2192 <strong>Jalahalli Village Stop</strong> \u00b7 4 min<br>
+                   <strong>4.</strong> Walk home \u00b7 ~3 min`}
             </div>
-            <span class="guide-tag t">🔄 2 buses — ~25 min total</span>
+            <span class="guide-tag t">2 buses \u00b7 ~25 min total</span>
           </div>
         </div>
 
         <div class="guide-item">
           <div class="guide-pill transfer">
-            <span>🗺</span>
-            <span>Maps</span>
+            <span>maps</span>
           </div>
           <div class="guide-info">
-            <div class="guide-route-name">Google Maps Walking & Live Transit</div>
+            <div class="guide-route-name">Walking & Live Transit</div>
             <div class="guide-route-desc" style="display:flex;flex-direction:column;gap:6px;">
-              <a href="${MAPS_LINKS.walkToHMTHospital}" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none;">🏥 Walk to HMT Hospital Stop (5 min) →</a>
-              <a href="${MAPS_LINKS.walkToJalahalliVillage}" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none;">🚏 Walk to Jalahalli Village Stop (3 min) →</a>
-              <a href="${c ? MAPS_LINKS.walkFromStopToCollege : MAPS_LINKS.walkFromCollegeToStop}" target="_blank" style="color:var(--warm-orange-dark);font-weight:600;text-decoration:none;">🏫 ${c ? 'Bus Stop → Campus' : 'Campus → Bus Stop'} (5 min) →</a>
-              <a href="${c ? MAPS_LINKS.transitFullCollege : MAPS_LINKS.transitFullHome}" target="_blank" style="color:var(--transfer-color);font-weight:600;text-decoration:none;">🗺 Open Live Google Maps Route →</a>
+              <a href="${MAPS_LINKS.walkToHMTHospital}" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none;">walk to HMT Hospital Stop \u00b7 5 min \u2192</a>
+              <a href="${MAPS_LINKS.walkToJalahalliVillage}" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none;">walk to Jalahalli Village Stop \u00b7 3 min \u2192</a>
+              <a href="${c ? MAPS_LINKS.walkFromStopToCollege : MAPS_LINKS.walkFromCollegeToStop}" target="_blank" style="color:var(--warm-orange-dark);font-weight:600;text-decoration:none;">${c ? 'bus stop \u2192 campus' : 'campus \u2192 bus stop'} \u00b7 5 min \u2192</a>
+              <a href="${c ? MAPS_LINKS.transitFullCollege : MAPS_LINKS.transitFullHome}" target="_blank" style="color:var(--transfer-color);font-weight:600;text-decoration:none;">open live google maps route \u2192</a>
             </div>
           </div>
         </div>

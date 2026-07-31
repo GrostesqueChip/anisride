@@ -7,13 +7,14 @@ A modern, soft-minimalist Progressive Web App (PWA) built specifically for Anika
 ## 🌟 Features
 
 - **Real BMTC Bus Routes (Google Maps Verified)**:
-  - **Direct (`273-B` / `276`)**: Boards at **HMT Hospital Stop** (~5 min walk) → **MS Ramaiah College Stop** (Gate 11, ~25 min direct ride).
-  - **Gate 11 Shortcut**: Drops at **MS Ramaiah College Stop** with a quick ~2 min walk (150m) straight into Gate 11.
-  - **2-Bus Transfers via BEL Circle**: Boards feeder **`502-C`**, **`501-NH`**, or **`502-E`** at **Jalahalli Village Stop** (~3 min walk) → Transfers at **BEL Circle** to **`273`**, **`276`**, or **`401-K`** → **MS Ramaiah College Stop (Gate 11)** (~28–30 min total).
+  - **Direct `273-B`**: Boards at **HMT Hospital Stop** (~5 min walk) → **MS Ramaiah College Stop** (Gate 10/11, ~25 min direct ride).
+  - **Direct `276`**: Boards at **HMT Hospital Stop** (~5 min walk) → **MS Ramaiah Hospital Stop** (Main Gate, ~22 min direct ride).
+  - **Direct `273`**: Boards at **Jalahalli Village Stop** (~3 min walk) → **MS Ramaiah College Stop** (Gate 10/11, ~16 min direct ride).
+  - **2-Bus Transfers via BEL Circle**: Boards feeder **`502-C`**, **`501-NH`**, or **`502-E`** at **Jalahalli Village Stop** (~3 min walk) → Transfers at **BEL Circle** to **`273-C`** or **`401-K`** → **MS Ramaiah College Stop (Gate 10/11)** (~25–30 min total).
 - **Tabbed View**: Auto-switches between **To MSRIT** (morning) and **To Home** (afternoon).
 - **Time Calculations**: Shows live countdown, exact departure, walk-adjusted **"Leave by"** time, and transit-adjusted **"Reach by"** time.
-- **Google Maps Walking Directions**: Quick-action links directly to walking routes for both bus stops and Gate 11.
-- **WhatsApp Safe Arrival**: One-tap button (`I reached loveyyy 🤍`) sends a message to Sharvesh (`+91 9448176034`).
+- **Google Maps Walking Directions**: Quick-action links directly to walking routes for both bus stops and Gate 10/11.
+- **WhatsApp Safe Arrival**: One-tap button (`I reached loveyy 🤍`) sends a message to Sharvesh (`+91 9448176034`).
 - **iOS & Android PWA Support**: Can be added to the iPhone home screen with a native app icon and full-screen experience.
 
 ---
