@@ -1,6 +1,6 @@
 # Anu's Ride 🚌
 
-A modern, soft-minimalist Progressive Web App (PWA) built specifically for Anika's daily BMTC bus commute between **Vinyaas Virtue** (Bahubali Nagar) and **MS Ramaiah Institute of Technology** (Mathikere).
+A modern, soft-minimalist Progressive Web App (PWA) built specifically for Anu's daily BMTC bus commute between **Vinyaas Virtue** (Bahubali Nagar) and **MS Ramaiah Institute of Technology** (Mathikere).
 
 ---
 
@@ -45,7 +45,7 @@ Anu/
 
 ---
 
-## 📱 How to Install on Anika's iPhone
+## 📱 How to Install on Anu's iPhone
 
 1. Open the deployed website link in **Safari**.
 2. Tap the **Share** button (bottom bar).
