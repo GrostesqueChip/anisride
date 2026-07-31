@@ -376,13 +376,13 @@
     // ── SCHEDULE DATA ──
     const SCHEDULE_TO_COLLEGE = [
       // ── 7:00 AM – 7:30 AM ──
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:00 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:00 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
-      { bus: "276", stop: "HMT Hospital Stop", time: "07:15 AM", walkMin: 5, type: "direct",
+      { bus: "276", stop: "HMT Hospital Stop", time: "07:15 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
         note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:20 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:20 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "07:25 AM", walkMin: 3, type: "direct",
@@ -390,16 +390,16 @@
         note: "Direct 273 from Jalahalli Village Stop \u2192 College" },
 
       // ── 7:30 AM – 8:00 AM ──
-      { bus: "276", stop: "HMT Hospital Stop", time: "07:35 AM", walkMin: 5, type: "direct",
+      { bus: "276", stop: "HMT Hospital Stop", time: "07:35 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
         note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:40 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "07:40 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B from HMT Hospital Stop \u2192 Gate 10/11" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "07:50 AM", walkMin: 3, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 from Jalahalli Village Stop" },
-      { bus: "276", stop: "HMT Hospital Stop", time: "07:55 AM", walkMin: 5, type: "direct",
+      { bus: "276", stop: "HMT Hospital Stop", time: "07:55 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
         note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
       { bus: "501-NH", stop: "Jalahalli Village Stop", time: "07:58 AM", walkMin: 3, type: "transfer",
@@ -408,16 +408,16 @@
         note: "Transfer via BEL Circle (~25 min total)" },
 
       // ── 8:00 AM – 8:30 AM ──
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:00 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:00 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B \u2014 arrive by ~8:30 AM" },
       { bus: "273", stop: "Jalahalli Village Stop", time: "08:10 AM", walkMin: 3, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 16, gate: "Gate 10/11",
         note: "Direct 273 from Jalahalli Village Stop" },
-      { bus: "276", stop: "HMT Hospital Stop", time: "08:15 AM", walkMin: 5, type: "direct",
+      { bus: "276", stop: "HMT Hospital Stop", time: "08:15 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah Hospital Stop", ride: 22, gate: "Main Gate",
         note: "Direct 276 via New BEL Rd \u2192 Main Gate" },
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:20 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:20 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Direct 273-B \u2014 arrive ~8:50, just in time for 9 AM" },
       { bus: "502-E", stop: "Jalahalli Village Stop", time: "08:25 AM", walkMin: 3, type: "transfer",
@@ -433,7 +433,7 @@
         alight: "MS Ramaiah College Stop", ride: 14, connector: "502-C", secondBus: "401-K",
         transferNote: "502-C \u2192 BEL Circle (4 min) \u2192 401-K \u2192 MS Ramaiah College (7 min)",
         note: "Last transfer option for 9 AM class" },
-      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:40 AM", walkMin: 5, type: "direct",
+      { bus: "273-B", stop: "HMT Hospital Stop", time: "08:40 AM", walkMin: 15, type: "direct",
         alight: "MS Ramaiah College Stop", ride: 25, gate: "Gate 10/11",
         note: "Late 273-B \u2014 reach by ~9:10" },
     ];
@@ -578,18 +578,16 @@
           <div class="route-point end">${c ? 'College' : 'Vinyaas Virtue'}</div>
         </div>
         <div class="route-chips">
-          <div class="route-chip">HMT Hospital \u00b7 5 min walk</div>
-          <div class="route-chip">Jalahalli Village \u00b7 3 min walk</div>
           <div class="route-chip">Transfers at BEL Circle</div>
         </div>
         <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
           <a href="${MAPS_LINKS.walkToHMTHospital}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
-            HMT Hospital Stop \u00b7 5 min
+            HMT Hospital Stop \u00b7 15 min walk
           </a>
           <a href="${MAPS_LINKS.walkToJalahalliVillage}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
-            Jalahalli Village \u00b7 3 min
+            Jalahalli Village \u00b7 3 min walk
           </a>
           <a href="${c ? MAPS_LINKS.walkFromStopToCollege : MAPS_LINKS.walkFromCollegeToStop}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--warm-orange-light);color:var(--warm-orange-dark);text-decoration:none;">
@@ -752,14 +750,14 @@
             <div class="guide-route-name">273-B Direct Route (Gate 10/11)</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>1.</strong> Walk to <strong>HMT Hospital Stop</strong> · ~400m / 5 min<br>
+                ? `<strong>1.</strong> Walk to <strong>HMT Hospital Stop</strong> · ~400m / 15 min<br>
                    <strong>2.</strong> Board <strong>273-B</strong><br>
                    <strong>3.</strong> Get off at <strong>MS Ramaiah College Stop</strong> (Gate 10/11) · ~25 min ride<br>
                    <strong>4.</strong> Walk to campus · ~5 min`
                 : `<strong>1.</strong> Walk to <strong>MS Ramaiah College Stop</strong> (Gate 10/11) · ~5 min from campus<br>
                    <strong>2.</strong> Board <strong>273-B</strong> toward Jalahalli<br>
                    <strong>3.</strong> Get off at <strong>HMT Hospital Stop</strong> · ~25 min ride<br>
-                   <strong>4.</strong> Walk home · ~5 min`}
+                   <strong>4.</strong> Walk home · ~15 min`}
             </div>
             <span class="guide-tag d">direct from HMT Hospital Stop · ~25 min total</span>
           </div>
@@ -773,14 +771,14 @@
             <div class="guide-route-name">276 Direct Route (Main Gate)</div>
             <div class="guide-route-desc">
               ${c
-                ? `<strong>1.</strong> Walk to <strong>HMT Hospital Stop</strong> · ~400m / 5 min<br>
+                ? `<strong>1.</strong> Walk to <strong>HMT Hospital Stop</strong> · ~400m / 15 min<br>
                    <strong>2.</strong> Board <strong>276</strong> via New BEL Rd<br>
                    <strong>3.</strong> Get off at <strong>MS Ramaiah Hospital Stop</strong> (Main Gate) · ~22 min ride<br>
                    <strong>4.</strong> Walk to campus · ~5 min`
                 : `<strong>1.</strong> Walk to <strong>MS Ramaiah Hospital Stop</strong> (Main Gate)<br>
                    <strong>2.</strong> Board <strong>276</strong> toward Jalahalli<br>
                    <strong>3.</strong> Get off at <strong>HMT Hospital Stop</strong> · ~22 min ride<br>
-                   <strong>4.</strong> Walk home · ~5 min`}
+                   <strong>4.</strong> Walk home · ~15 min`}
             </div>
             <span class="guide-tag d">direct via New BEL Rd · ~22 min total</span>
           </div>
