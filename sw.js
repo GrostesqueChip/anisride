@@ -1,13 +1,16 @@
 // Ani's Ride — Service Worker
 // Caches app assets for offline use
 
-const CACHE_NAME = 'anis-ride-v11';
+const CACHE_NAME = 'anis-ride-v12';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './images/header.png',
+  './images/no-buses.png',
+  './images/floral.png'
 ];
 
 // Install — cache all assets

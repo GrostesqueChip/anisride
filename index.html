@@ -249,6 +249,11 @@
     .guide-tag.d { color: #5B7A5B; background: rgba(139, 158, 139, 0.08); }
     .guide-tag.t { color: var(--transfer-color); background: rgba(178, 157, 130, 0.08); }
 
+    /* ── Illustrations ── */
+    .header-illustration { width: 100%; max-height: 120px; object-fit: cover; border-radius: var(--radius-card); margin-bottom: 18px; opacity: 0.85; animation: fadeSlideDown 0.6s ease 0.2s both; }
+    .no-buses-illustration { width: 160px; height: 160px; object-fit: contain; margin: 0 auto 16px; opacity: 0.8; }
+    .guide-floral { width: 100%; max-height: 40px; object-fit: contain; opacity: 0.5; margin-bottom: 14px; }
+
     /* ── No Buses ── */
     .no-buses { text-align: center; padding: 40px 24px; animation: fadeSlideDown 0.5s ease; }
     .no-buses-title { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 600; font-style: italic; color: var(--text-primary); margin-bottom: 8px; }
@@ -310,6 +315,8 @@
       <h1 class="greeting" id="greeting"></h1>
       <p class="greeting-sub" id="greetingSub"></p>
     </header>
+
+    <img src="images/header.png" alt="" class="header-illustration">
 
     <nav class="tab-container">
       <div class="tab-toggle">
@@ -625,6 +632,7 @@
 
       if (up.length === 0) {
         bl.innerHTML = `<div class="no-buses">
+          <img src="images/no-buses.png" alt="" class="no-buses-illustration">
           <div class="no-buses-title">no more buses today</div>
           <div class="no-buses-text">${currentTab === 'college' ? 'all morning buses have left — check "to home" for your return' : 'all evening buses have gone, see you tomorrow 💛'}</div>
           <div class="no-buses-tip">
@@ -733,6 +741,7 @@
       const el = document.getElementById('routeGuide');
       const c = currentTab === 'college';
       el.innerHTML = `
+        <img src="images/floral.png" alt="" class="guide-floral">
         <div class="guide-title">🗺 route guide</div>
 
         <div class="guide-item">
