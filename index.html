@@ -369,6 +369,7 @@
       walkFromCollegeToStop: "https://www.google.com/maps/dir/?api=1&origin=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&destination=MS+Ramaiah+College+Bus+Stop,+Mathikere,+Bengaluru&travelmode=walking",
       walkFromHMTToHome: "https://www.google.com/maps/dir/?api=1&origin=HMT+Hospital+Bus+Stop,+Jalahalli+Road,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=walking",
       walkFromJalahalliToHome: "https://www.google.com/maps/dir/?api=1&origin=Jalahalli+Village+Bus+Stop,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=walking",
+      walkToBELCircle: "https://www.google.com/maps/search/?api=1&query=BEL+Circle+Bus+Stop,+Bengaluru",
       transitFullCollege: "https://www.google.com/maps/dir/?api=1&origin=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&destination=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&travelmode=transit",
       transitFullHome: "https://www.google.com/maps/dir/?api=1&origin=Ramaiah+Institute+of+Technology,+Mathikere,+Bengaluru&destination=Vinyaas+Virtue,+Bahubali+Nagar,+Jalahalli,+Bengaluru&travelmode=transit",
     };
@@ -577,9 +578,6 @@
           <div class="route-dot end-dot"></div>
           <div class="route-point end">${c ? 'College' : 'Vinyaas Virtue'}</div>
         </div>
-        <div class="route-chips">
-          <div class="route-chip">Transfers at BEL Circle</div>
-        </div>
         <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
           <a href="${MAPS_LINKS.walkToHMTHospital}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
@@ -588,6 +586,10 @@
           <a href="${MAPS_LINKS.walkToJalahalliVillage}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
             Jalahalli Village \u00b7 3 min walk
+          </a>
+          <a href="${MAPS_LINKS.walkToBELCircle}" target="_blank"
+             style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent-hover);text-decoration:none;">
+            Transfers at BEL Circle
           </a>
           <a href="${c ? MAPS_LINKS.walkFromStopToCollege : MAPS_LINKS.walkFromCollegeToStop}" target="_blank"
              style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:50px;font-size:11px;font-weight:600;background:var(--warm-orange-light);color:var(--warm-orange-dark);text-decoration:none;">
