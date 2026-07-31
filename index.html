@@ -314,10 +314,10 @@
     <nav class="tab-container">
       <div class="tab-toggle">
         <button class="tab-btn active" id="tabCollege" onclick="switchTab('college')">
-          to college
+          🎓 to college
         </button>
         <button class="tab-btn" id="tabHome" onclick="switchTab('home')">
-          to home
+          🏡 to home
         </button>
       </div>
     </nav>
@@ -548,10 +548,10 @@
       const g = document.getElementById('greeting');
       const s = document.getElementById('greetingSub');
       const name = Math.random() < 0.5 ? 'Ani' : 'you';
-      if (h >= 5 && h < 12) { g.textContent = `good morning, ${name} \u2600\uFE0F`; s.textContent = "here are your buses today"; }
-      else if (h >= 12 && h < 17) { g.textContent = `good afternoon, ${name}`; s.textContent = "ready to head home?"; }
-      else if (h >= 17 && h < 21) { g.textContent = `good evening, ${name}`; s.textContent = "catch your ride back"; }
-      else { g.textContent = `hey ${name}`; s.textContent = "planning tomorrow's commute?"; }
+      if (h >= 5 && h < 12) { g.textContent = `good morning, ${name} ☀️`; s.textContent = "here are your buses today"; }
+      else if (h >= 12 && h < 17) { g.textContent = `good afternoon, ${name} 🌤`; s.textContent = "ready to head home?"; }
+      else if (h >= 17 && h < 21) { g.textContent = `good evening, ${name} 🌙`; s.textContent = "catch your ride back"; }
+      else { g.textContent = `hey ${name} ✨`; s.textContent = "planning tomorrow's commute?"; }
       document.getElementById('headerDate').textContent = fmtDate();
     }
 
@@ -562,7 +562,7 @@
       const el = document.getElementById('routeSummary');
       const c = currentTab === 'college';
       el.innerHTML = `
-        <div class="route-summary-title">your commute</div>
+        <div class="route-summary-title">📍 your commute</div>
         <div class="route-journey">
           <div class="route-point start">${c ? 'Vinyaas Virtue' : 'College'}</div>
           <div class="route-dot start-dot"></div>
@@ -626,7 +626,7 @@
       if (up.length === 0) {
         bl.innerHTML = `<div class="no-buses">
           <div class="no-buses-title">no more buses today</div>
-          <div class="no-buses-text">${currentTab === 'college' ? 'all morning buses have left \u2014 check "to home" for your return' : 'all evening buses have gone, see you tomorrow'}</div>
+          <div class="no-buses-text">${currentTab === 'college' ? 'all morning buses have left — check "to home" for your return' : 'all evening buses have gone, see you tomorrow 💛'}</div>
           <div class="no-buses-tip">
             <a href="${fullLink}" target="_blank" style="color:inherit;text-decoration:underline;">check google maps</a> for real-time options
           </div>
@@ -697,7 +697,7 @@
           <div class="bus-number-pill">
             ${pillContent}
           </div>
-          ${!isPast ? `<a href="${mapsUrl(from, to)}" target="_blank" class="maps-link">map \u2192</a>` : ''}
+          ${!isPast ? `<a href="${mapsUrl(from, to)}" target="_blank" class="maps-link">📍 map</a>` : ''}
         </div>
         <div class="bus-info">
           <div class="bus-top-row">
@@ -715,7 +715,7 @@
           ${bus.transferNote && !isPast ? `<div class="bus-transfer-detail">${bus.transferNote}</div>` : ''}
           <div class="bus-meta-row">
             <span class="${badge}">${cd.text}</span>
-            ${!isPast && !cd.past ? `<span class="meta-badge">leave by ${leaveBy} \u00b7 ${bus.walkMin}m walk</span>` : ''}
+            ${!isPast && !cd.past ? `<span class="meta-badge">🚶‍♀️ leave by ${leaveBy} · ${bus.walkMin}m walk</span>` : ''}
           </div>
           ${!isPast && !cd.past ? `<div class="bus-meta-row" style="margin-top:4px">
             <span class="meta-badge">reach by ~${arriveBy}</span>
@@ -733,7 +733,7 @@
       const el = document.getElementById('routeGuide');
       const c = currentTab === 'college';
       el.innerHTML = `
-        <div class="guide-title">route guide</div>
+        <div class="guide-title">🗺 route guide</div>
 
         <div class="guide-item">
           <div class="guide-pill direct">
