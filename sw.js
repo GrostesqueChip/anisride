@@ -1,7 +1,7 @@
 // Ani's Ride — Service Worker
 // Caches app assets for offline use
 
-const CACHE_NAME = 'anis-ride-v12';
+const CACHE_NAME = 'anis-ride-v13';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -35,11 +35,29 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch — serve from cache, fallback to network
+// Fetch — Network-First for HTML/pages, Cache-First for static assets
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
-    })
-  );
+  if (event.request.mode === 'navigate' || event.request.url.endsWith('index.html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => caches.match(event.request))
+    );
+  } else {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request).then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        });
+      })
+    );
+  }
 });

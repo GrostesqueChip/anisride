@@ -862,7 +862,11 @@
     }
     function dismissInstall() { document.getElementById('installBanner').classList.remove('show'); localStorage.setItem('installDismissed', 'true'); }
 
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then((reg) => {
+        reg.update();
+      }).catch(() => {});
+    }
 
     function init() {
       updateGreeting();
