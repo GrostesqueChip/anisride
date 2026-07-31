@@ -1,4 +1,4 @@
-# Ani's Ride 🚌
+# Anu's Ride 🚌
 
 A modern, soft-minimalist Progressive Web App (PWA) built specifically for Anika's daily BMTC bus commute between **Vinyaas Virtue** (Bahubali Nagar) and **MS Ramaiah Institute of Technology** (Mathikere).
 
@@ -37,7 +37,7 @@ Anu/
 1. **Option A (Netlify — Easiest & Free)**:
    - Go to [Netlify Drop](https://app.netlify.com/drop).
    - Drag & drop the entire `Anu` folder.
-   - You will instantly get a live shareable link (e.g., `https://anis-ride.netlify.app`).
+   - You will instantly get a live shareable link (e.g., `https://anus-ride.netlify.app`).
 
 2. **Option B (GitHub Pages)**:
    - Push this repo to GitHub.

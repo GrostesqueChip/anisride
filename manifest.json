@@ -1,6 +1,6 @@
 {
-  "name": "Ani's Ride",
-  "short_name": "Ani's Ride",
+  "name": "Anu's Ride",
+  "short_name": "Anu's Ride",
   "description": "Bus commute helper for Anika — Vinyaas Virtue ↔ MSRIT",
   "start_url": "./index.html",
   "display": "standalone",
